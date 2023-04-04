@@ -1,0 +1,21 @@
+static CARCOPCS 	= 	599;
+static HPV1000 		= 	523;
+static SABRE 		=	475;
+static FCR900		= 	521;
+static TAXI 		=	420;
+static ONIBUS 		= 	437;
+static LIMUSINE 	= 	409;
+static MAVERICK 	= 	487;
+static SAVANNA 		= 	567;
+static PCJ600		= 	461;
+static SHAMAL		= 	519;
+static RDTRAIN 		= 	515;
+static JETMAX 		= 	493;
+static REEFER 		= 	453;
+static DODO 		=   	593;
+static L410 		=       410;
+static ANDROMADA 	=  	592;
+static HUNTER 		=     	425;
+static AT400 		=      	577;
+
+#define MANANA		410;

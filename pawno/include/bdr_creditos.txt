@@ -1,0 +1,8 @@
+	writelog("\n========================================================");
+	writelog(" [BDR] RPG Rules Brasil e [BDR] Clan - Brasil Demolition RPG");
+ 	writelog(" Criador: [BDR]Mac[BS]                 ");
+ 	writelog(" Contato: rafagcunha@hotmail.com        ");
+ 	writelog(" [BDR] Clan             ");
+	writelog("========================================================\n");
+
+

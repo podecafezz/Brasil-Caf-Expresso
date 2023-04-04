@@ -1,0 +1,628 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[23:11:50] 
+[23:11:50] Server Plugins
+[23:11:50] --------------
+[23:11:50]  Loading plugin: crashdetect
+[23:11:50]   crashdetect v4.8.3 is OK.
+[23:11:50]   Loaded.
+[23:11:50]  Loading plugin: MapAndreas
+[23:11:50]   Loaded.
+[23:11:50]  Loading plugin: Whirlpool
+[23:11:50]  
+[23:11:50]  ==================
+[23:11:50]  
+[23:11:50]   Whirlpool loaded
+[23:11:50]  
+[23:11:50]  ==================
+[23:11:50]  
+[23:11:50]   Loaded.
+[23:11:50]  Loading plugin: sscanf
+[23:11:50] 
+
+[23:11:50]  ===============================
+
+[23:11:50]       sscanf plugin loaded.     
+
+[23:11:50]    (c) 2009 Alex "Y_Less" Cole
+
+[23:11:50]    0.3d-R2 500 Players "dnee"
+
+[23:11:50]  ===============================
+
+[23:11:50]   Loaded.
+[23:11:50]  Loading plugin: streamer
+[23:11:50] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[23:11:50]   Loaded.
+[23:11:50]  Loaded 5 plugins.
+
+[23:11:50] 
+[23:11:50] Filterscripts
+[23:11:50] ---------------
+[23:11:50]   Loading filterscript 'SamSites041.amx'...
+[23:11:50]   Loading filterscript 'RCONCMDPLUS.amx'...
+[23:11:50] 
+___________________________________________
+[23:11:50]           Comandos Extras para Rcon          
+[23:11:50] ___________________________________________
+
+[23:11:50]   Loading filterscript 'lotto.amx'...
+[23:11:50] -------------------------------------------------------------
+[23:11:50] ------------Loteria [Rockstar] Filter------------------------
+[23:11:50] -------------Created By Grove/Jay----------------------------
+[23:11:50] -------------------Loaded!-----------------------------------
+[23:11:50] -------------------------------------------------------------
+[23:11:50]   Loading filterscript 'gang.amx'...
+[23:11:50] 
+===================================================
+[23:11:50]  Carregando Gang System [0.3d]
+[23:11:50]  Versao: 2.0.0 - By: Sub_Zero0_
+[23:11:50]  
+[23:11:50]  Verificando a pasta /gangs/ ...
+[23:11:50]  Pasta e arquivos básicos: OK
+[23:11:50]  
+[23:11:50]  Carregado com sucesso!
+[23:11:50] ===================================================
+
+[23:11:50]   Loading filterscript 'Untitled.amx'...
+[23:11:50]   Unable to load filterscript 'Untitled.amx'.
+[23:11:50]   Loading filterscript '2.amx'...
+[23:11:50]   Unable to load filterscript '2.amx'.
+[23:11:50]   Loading filterscript 'prefeito.amx'...
+[23:11:50] 
+----------------------------------------------
+[23:11:50] SISTEMA DE ELEIÇÕES POR : [DirectX]_Gabriel AKA RODRA
+[23:11:50] ----------------------------------------------
+
+[23:11:50]   Loading filterscript 'mdogg.amx'...
+[23:11:50]   Loaded 6 filterscripts.
+
+[23:11:50] *** Streamer Plugin: Include file version (0x26105) does not match plugin version (0x26104) (script needs to be recompiled with the latest include file)
+[23:11:50] MapAndreas: plugin could not init!
+[23:11:50] MapAndreas: check files and make sure you have enough memory!
+[23:11:50] * O nick esta sendo temporarimente usado para kickar crashers:
+[23:11:50] 	_______________________
+
+
+[23:11:50] 
+--------------------------------------
+[23:11:50]  Surface To Air Missiles System Loaded
+[23:11:50]                  0.4.1
+[23:11:50] --------------------------------------
+
+[23:11:50] [nPlayer:] Category ID 0 (Trance) created.
+[23:11:50] [nPlayer:] Item ID 0 (Discover Trance Radio) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 1 (Digitally Imported - Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 2 (Trance.FM) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 3 (TranceRadio.CH) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 4 (Afterhours FM) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 5 (Club Lounge Radio - Trance td) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 6 (1Mix Radio) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 7 (1.FM Radio - Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 8 (Digitally Imported - Vocal Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 9 (NERadio International) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 10 (Chromanova.FM) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 11 (Bassfabrik) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 12 (Digitally Imported - DJ Mixes) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 13 (Digitally Imported - Progressive) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 14 (Afterhours FM - DJS) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 15 (NERadio Sweden) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 16 (p s y r a d i o FM) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 17 (PulsRadio Version Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 18 (Digitally Imported - Classic Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 19 (SomaFM - Tag's Trip) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 20 (Mika FM) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 21 (Digitally Imported - Breaks) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 22 (PSYCHEDELIK) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 23 (PSYCHEDELIK - Trance Flux) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 24 (1Club.FM - Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 25 (TranceSection.FM) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 26 (1Club.FM - 24/7 Trance Mixes) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 27 (Shathor) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 28 (DJTiestoStream.NL) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 29 (Trancemission.FM) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 30 (Dance Radio Global - Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 31 (ETN fm - Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 32 (Trance Elements) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 33 (Techno FM - Trance) created and attached to Trance.
+[23:11:50] [nPlayer:] Item ID 34 (Radio Seven) created and attached to Trance.
+[23:11:50] [nPlayer:] Category ID 1 (Local) created.
+[23:11:50] [nPlayer:] Item ID 35 (Cool FM 97.4 FM) created and attached to Local.
+[23:11:50] [nPlayer:] Item ID 36 (Citybeat 96.7 FM) created and attached to Local.
+[23:11:50] [nPlayer:] Item ID 37 (IUR FM) created and attached to Local.
+[23:11:50] [nPlayer:] Item ID 38 (U105.8FM) created and attached to Local.
+[23:11:50] [nPlayer:] Item ID 39 (Carrickfergus 106.7 FM) created and attached to Local.
+[23:11:50] [nPlayer:] Item ID 40 (Blast 106.4 FM) created and attached to Local.
+[23:11:50] [nPlayer:] Category ID 2 (Holidays) created.
+[23:11:50] [nPlayer:] Item ID 41 (Christmas Classics - Word Of Truth Radio) created and attached to Holidays.
+[23:11:50] [nPlayer:] Item ID 42 (Christmas Radio Network) created and attached to Holidays.
+[23:11:50] [nPlayer:] Category ID 3 (Country) created.
+[23:11:50] [nPlayer:] Item ID 43 (181.Fm - Kickin Country - Today's Best Country!) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 44 (DRS 2006 - Country Radio Switzerland) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 45 (CMR Nashville) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 46 (The World Net Radio - Country Oldies) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 47 (181.Fm - Highway 181 (Classic Country)) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 48 (Country 108 - Your Country Music Station - 247) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 49 (1.FM - Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 50 (WKRK Radio) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 51 (1.FM - Absolutely Country Hits) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 52 (Nashville Classics) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 53 (HPR1 - Classic Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 54 (Active Radio US) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 55 (Boot Liquor) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 56 (Nashville FM) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 57 (UK Country Radio) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 58 (Super Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 59 (Country Music24) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 60 (The World Net Radio - Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 61 (Steel Radio) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 62 (Trucknet Radio) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 63 (Lonestar 101 - Texas Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 64 (The New Highway - 40 Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 65 (Radioio - Classic Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 66 (Country Crossroads Radio) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 67 (Radio Country Club) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 68 (KLMR AM Classic Country) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 69 (1.FM - Absolute Country Hits) created and attached to Country.
+[23:11:50] [nPlayer:] Item ID 70 (The Country Top 30) created and attached to Country.
+[23:11:50] [nPlayer:] Category ID 4 (Hardstyle) created.
+[23:11:50] [nPlayer:] Item ID 71 (Hard.FM - The #1 Hardstyle Radio) created and attached to Hardstyle.
+[23:11:50] [nPlayer:] Item ID 72 (Digitally Imported - Hardstyle) created and attached to Hardstyle.
+[23:11:50] [nPlayer:] Item ID 73 (Q-Dance) created and attached to Hardstyle.
+[23:11:50] [nPlayer:] Item ID 74 (Hardsection FM) created and attached to Hardstyle.
+[23:11:50] [nPlayer:] Item ID 75 (Hardbase FM) created and attached to Hardstyle.
+[23:11:50] [nPlayer:] Item ID 76 (Clubsoundz FM) created and attached to Hardstyle.
+[23:11:50] [nPlayer:] Category ID 5 (Dubstep) created.
+[23:11:50] [nPlayer:] Item ID 77 (Dubstep FM) created and attached to Dubstep.
+[23:11:50] [nPlayer:] Item ID 78 (Sensimedia - Strictly Dubstep & Bass) created and attached to Dubstep.
+[23:11:50] [nPlayer:] Item ID 79 (Filth FM) created and attached to Dubstep.
+[23:11:50] [nPlayer:] Item ID 80 (DubstepLive Radio (DNBTV)) created and attached to Dubstep.
+[23:11:50] [nPlayer:] Item ID 81 (Shakedown FM) created and attached to Dubstep.
+[23:11:50] [nPlayer:] Item ID 82 (Digitally Imported - Dubstep) created and attached to Dubstep.
+[23:11:50] [nPlayer:] Item ID 83 (Rough Tempo) created and attached to Dubstep.
+[23:11:50] [nPlayer:] Category ID 6 (Dance) created.
+[23:11:50] [nPlayer:] Item ID 84 (Gaydar Radio) created and attached to Dance.
+[23:11:50] [nPlayer:] Item ID 85 (MaxDance - Trance/Dance) created and attached to Dance.
+[23:11:50] [nPlayer:] Item ID 86 (Energy FM) created and attached to Dance.
+[23:11:50] [nPlayer:] Item ID 87 (Digitally Imported - Hard Dance) created and attached to Dance.
+[23:11:50] [nPlayer:] Item ID 88 (Digitally Imported - Eurodance) created and attached to Dance.
+[23:11:50] [nPlayer:] Item ID 89 (Soundic Radio) created and attached to Dance.
+[23:11:50] [nPlayer:] Item ID 90 (NonStopPlay - Dance Radio) created and attached to Dance.
+[23:11:50] [nPlayer:] Item ID 91 (Gay FM) created and attached to Dance.
+[23:11:50] [nPlayer:] Category ID 7 (Metal) created.
+[23:11:50] [nPlayer:] Item ID 92 (Rockradio1.Com - Classic Hard Rock & Heavy Metal) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 93 (SnakeNet Metal Radio) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 94 (1.FM - High Voltage) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 95 (Netrock101) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 96 (ChroniX Metal) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 97 (Death FM) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 98 (Hard Rock Radio Live) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 99 (Braingell) created and attached to Metal.
+[23:11:50] [nPlayer:] Item ID 100 (Metal Tome) created and attached to Metal.
+[23:11:50] [nPlayer:] Category ID 8 (House) created.
+[23:11:50] [nPlayer:] Item ID 101 (House Radio) created and attached to House.
+[23:11:50] [nPlayer:] Item ID 102 (SSRadio) created and attached to House.
+[23:11:50] [nPlayer:] Item ID 103 (Dance Radio Global - Progressive House) created and attached to House.
+[23:11:50] [nPlayer:] Item ID 104 (ETN fm - House) created and attached to House.
+[23:11:50] [nPlayer:] Category ID 9 (Chillout) created.
+[23:11:50] [nPlayer:] Item ID 105 (Digitally Imported - Chillout Dreams) created and attached to Chillout.
+[23:11:50] [nPlayer:] Item ID 106 (Chillout Radio Greece - Chillout/Ambient/Lounge Music) created and attached to Chillout.
+[23:11:50] [nPlayer:] Item ID 107 (4clubbers) created and attached to Chillout.
+[23:11:50] [nPlayer:] Category ID 10 (80s) created.
+[23:11:50] [nPlayer:] Item ID 108 (Offshore Music Radio) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 109 (More Fm - Classic Rock Radio) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 110 (ABC 80s Ireland) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 111 (Threeten Radio) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 112 (Glam FM) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 113 (Absolute 80s) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 114 (.977 The 80s Channel) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 115 (Kick Radio - 80s & 90s) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 116 (Dance Groove Radio) created and attached to 80s.
+[23:11:50] [nPlayer:] Item ID 117 (80s Planet) created and attached to 80s.
+[23:11:50] [nPlayer:] Category ID 11 (Techno) created.
+[23:11:50] [nPlayer:] Item ID 118 (Techno FM) created and attached to Techno.
+[23:11:50] [nPlayer:] Item ID 119 (JumpStation.FM) created and attached to Techno.
+[23:11:50] [nPlayer:] Category ID 12 (Hardcore) created.
+[23:11:50] [nPlayer:] Item ID 120 (Digitally Imported - Happy Hardcore) created and attached to Hardcore.
+[23:11:50] [nPlayer:] Item ID 121 (Hardcore Radio) created and attached to Hardcore.
+[23:11:50] [nPlayer:] Item ID 122 (Hardcore Power Radio) created and attached to Hardcore.
+[23:11:50] [nPlayer:] Category ID 13 (RnB) created.
+[23:11:50] [nPlayer:] Item ID 123 (Defjay) created and attached to RnB.
+[23:11:50] [nPlayer:] Item ID 124 (KISS) created and attached to RnB.
+[23:11:50] [nPlayer:] Category ID 14 (Rock) created.
+[23:11:50] [nPlayer:] Item ID 125 (Atlantic Sound Factory) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 126 (Regular Rotation) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 127 (Noise FM) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 128 (Idobi Radio) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 129 (Beatles Radio) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 130 (Absolute Radio) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 131 (181.FM - The Eagle (Classic Rock)) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 132 (Rock Radio1) created and attached to Rock.
+[23:11:50] [nPlayer:] Item ID 133 (Megarock Radio) created and attached to Rock.
+[23:11:50] [nPlayer:] Category ID 15 (Drum & Bass) created.
+[23:11:50] [nPlayer:] Item ID 134 (Bassjunkees.com - Drum & Bass, Oldskool, Jungle & Dubstep) created and attached to Drum & Bass.
+[23:11:50] [nPlayer:] Item ID 135 (Digitally Imported - Drum and Bass) created and attached to Drum & Bass.
+[23:11:50] [nPlayer:] Item ID 136 (DnB Heaven) created and attached to Drum & Bass.
+[23:11:50] [nPlayer:] Item ID 137 (DnB Radio) created and attached to Drum & Bass.
+[23:11:50] [nPlayer:] Item ID 138 (UK Bass Radio) created and attached to Drum & Bass.
+[23:11:50] [nPlayer:] Item ID 139 (Destroyer) created and attached to Drum & Bass.
+[23:11:50] [nPlayer:] Item ID 140 (Bassdrive) created and attached to Drum & Bass.
+[23:11:50] [nPlayer:] Category ID 16 (Misc) created.
+[23:11:50] [nPlayer:] Item ID 141 (HIT104 - Your Top 40 Channel) created and attached to Misc.
+[23:11:50] [nPlayer:] Item ID 142 (.977 The Hits Channel) created and attached to Misc.
+[23:11:50] [nPlayer:] Item ID 143 (Jack FM - All Hit Radio) created and attached to Misc.
+[23:11:50] [nPlayer:] Category ID 17 (Electro) created.
+[23:11:50] [nPlayer:] Item ID 144 (Electro Radio) created and attached to Electro.
+[23:11:50] [nPlayer:] Item ID 145 (Digitally Imported - Electro House) created and attached to Electro.
+[23:11:50] [nPlayer:] Item ID 146 (Tuff and Twisted) created and attached to Electro.
+[23:11:50] [nPlayer:] Item ID 147 (House Section FM) created and attached to Electro.
+[23:11:51] Objetos: 1247 carregado(s) de Objetos/Bases.txt
+[23:11:51] Objetos: 3701 carregado(s) de Objetos/Casas.txt
+[23:11:51] Objetos: 1230 carregado(s) de Objetos/Dten.txt
+[23:11:51] Objetos: 390 carregado(s) de Objetos/Games.txt
+[23:11:51] Objetos: 26 carregado(s) de Objetos/Jump.txt
+[23:11:51] Objetos: 1493 carregado(s) de Objetos/Outros.txt
+[23:11:51] ERRO! Falha ao carregar veículos do arquivo Conce/sv.txt (O arquivo não existe no diretório scriptfiles)!
+[23:11:51] Veículos: 0 carregado(s) de Conce/setados.txt
+[23:11:51] Veículos: 3 carregado(s) de vehicles/trains.txt
+[23:11:51] Veículos: 15 carregado(s) de vehicles/lv_law.txt
+[23:11:51] Veículos: 38 carregado(s) de vehicles/sf_law.txt
+[23:11:51] Veículos: 24 carregado(s) de vehicles/ls_law.txt
+[23:11:51] Spawns: 8 carregado(s) de SpawnPositions.txt
+[23:11:51] Aviso: O NÚMERO DE BOMBAS NÃO CORRESPONDE AOS DOS VEÍCULOS CHECADOS
+[23:11:51] 
+
+
+
+Servidor iniciado com sucesso!
+
+
+[23:11:51] Total de Objetos: 8113
+[23:11:51] Total de Pickups: 134
+[23:11:51] Total de Checkpoints: 83
+[23:11:51] Total de Race Checkpoints: 0
+[23:11:51] Total de MapIcons: 131
+[23:11:51] Total de TextLabels: 122
+[23:11:51] Total de Areas: 0
+[23:11:51] 
+
+* Nicks proibidos!
+[23:11:51] * os seguintes nicks estão proibidos de entrar no servidor:
+[23:11:51] 	com[1-9], lpt[1-9], ipt[1-9], clock$, nul, aux, prn, con,
+		com1.aux.[a-zA-Z0-9]
+
+
+[23:11:51] 
+=========================================
+[23:11:51]                 CaféTesting RPG Online              
+[23:11:51] =========================================
+
+[23:11:51] Number of vehicle models: 40
+[23:12:13] [connection] incoming connection: 192.168.15.10:50699 id: 0
+[23:12:13] [join] podecafe has joined the server (0:192.168.15.10)
+[23:12:15] Os animes foram pré carregados para podecafe.
+[23:12:36] [part] podecafe has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.DL-R1, (C)2005-2018 SA-MP Team
+
+[23:14:39] 
+[23:14:39] Server Plugins
+[23:14:39] --------------
+[23:14:39]  Loading plugin: crashdetect
+[23:14:39]   crashdetect v4.8.3 is OK.
+[23:14:39]   Loaded.
+[23:14:39]  Loading plugin: MapAndreas
+[23:14:39]   Loaded.
+[23:14:39]  Loading plugin: Whirlpool
+[23:14:39]  
+[23:14:39]  ==================
+[23:14:39]  
+[23:14:39]   Whirlpool loaded
+[23:14:39]  
+[23:14:39]  ==================
+[23:14:39]  
+[23:14:39]   Loaded.
+[23:14:39]  Loading plugin: sscanf
+[23:14:39] 
+
+[23:14:39]  ===============================
+
+[23:14:39]       sscanf plugin loaded.     
+
+[23:14:39]    (c) 2009 Alex "Y_Less" Cole
+
+[23:14:39]    0.3d-R2 500 Players "dnee"
+
+[23:14:39]  ===============================
+
+[23:14:39]   Loaded.
+[23:14:39]  Loading plugin: streamer
+[23:14:39] 
+
+*** Streamer Plugin v2.6.1 by Incognito loaded ***
+
+[23:14:39]   Loaded.
+[23:14:39]  Loaded 5 plugins.
+
+[23:14:39] 
+[23:14:39] Filterscripts
+[23:14:39] ---------------
+[23:14:39]   Loading filterscript 'SamSites041.amx'...
+[23:14:39]   Loading filterscript 'RCONCMDPLUS.amx'...
+[23:14:39] 
+___________________________________________
+[23:14:39]           Comandos Extras para Rcon          
+[23:14:39] ___________________________________________
+
+[23:14:39]   Loading filterscript 'lotto.amx'...
+[23:14:39] -------------------------------------------------------------
+[23:14:39] ------------Loteria [Rockstar] Filter------------------------
+[23:14:39] -------------Created By Grove/Jay----------------------------
+[23:14:39] -------------------Loaded!-----------------------------------
+[23:14:39] -------------------------------------------------------------
+[23:14:39]   Loading filterscript 'gang.amx'...
+[23:14:39] 
+===================================================
+[23:14:39]  Carregando Gang System [0.3d]
+[23:14:39]  Versao: 2.0.0 - By: Sub_Zero0_
+[23:14:39]  
+[23:14:39]  Verificando a pasta /gangs/ ...
+[23:14:39]  Pasta e arquivos básicos: OK
+[23:14:39]  
+[23:14:39]  Carregado com sucesso!
+[23:14:39] ===================================================
+
+[23:14:39]   Loading filterscript 'Untitled.amx'...
+[23:14:39]   Unable to load filterscript 'Untitled.amx'.
+[23:14:39]   Loading filterscript '2.amx'...
+[23:14:39]   Unable to load filterscript '2.amx'.
+[23:14:39]   Loading filterscript 'prefeito.amx'...
+[23:14:39] 
+----------------------------------------------
+[23:14:39] SISTEMA DE ELEIÇÕES POR : [DirectX]_Gabriel AKA RODRA
+[23:14:39] ----------------------------------------------
+
+[23:14:39]   Loading filterscript 'mdogg.amx'...
+[23:14:39]   Loaded 6 filterscripts.
+
+[23:14:39] *** Streamer Plugin: Include file version (0x26105) does not match plugin version (0x26104) (script needs to be recompiled with the latest include file)
+[23:14:39] MapAndreas: plugin could not init!
+[23:14:39] MapAndreas: check files and make sure you have enough memory!
+[23:14:39] * O nick esta sendo temporarimente usado para kickar crashers:
+[23:14:39] 	_______________________
+
+
+[23:14:39] 
+--------------------------------------
+[23:14:39]  Surface To Air Missiles System Loaded
+[23:14:39]                  0.4.1
+[23:14:39] --------------------------------------
+
+[23:14:39] [nPlayer:] Category ID 0 (Trance) created.
+[23:14:39] [nPlayer:] Item ID 0 (Discover Trance Radio) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 1 (Digitally Imported - Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 2 (Trance.FM) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 3 (TranceRadio.CH) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 4 (Afterhours FM) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 5 (Club Lounge Radio - Trance td) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 6 (1Mix Radio) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 7 (1.FM Radio - Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 8 (Digitally Imported - Vocal Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 9 (NERadio International) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 10 (Chromanova.FM) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 11 (Bassfabrik) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 12 (Digitally Imported - DJ Mixes) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 13 (Digitally Imported - Progressive) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 14 (Afterhours FM - DJS) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 15 (NERadio Sweden) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 16 (p s y r a d i o FM) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 17 (PulsRadio Version Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 18 (Digitally Imported - Classic Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 19 (SomaFM - Tag's Trip) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 20 (Mika FM) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 21 (Digitally Imported - Breaks) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 22 (PSYCHEDELIK) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 23 (PSYCHEDELIK - Trance Flux) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 24 (1Club.FM - Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 25 (TranceSection.FM) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 26 (1Club.FM - 24/7 Trance Mixes) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 27 (Shathor) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 28 (DJTiestoStream.NL) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 29 (Trancemission.FM) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 30 (Dance Radio Global - Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 31 (ETN fm - Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 32 (Trance Elements) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 33 (Techno FM - Trance) created and attached to Trance.
+[23:14:39] [nPlayer:] Item ID 34 (Radio Seven) created and attached to Trance.
+[23:14:39] [nPlayer:] Category ID 1 (Local) created.
+[23:14:39] [nPlayer:] Item ID 35 (Cool FM 97.4 FM) created and attached to Local.
+[23:14:39] [nPlayer:] Item ID 36 (Citybeat 96.7 FM) created and attached to Local.
+[23:14:39] [nPlayer:] Item ID 37 (IUR FM) created and attached to Local.
+[23:14:39] [nPlayer:] Item ID 38 (U105.8FM) created and attached to Local.
+[23:14:39] [nPlayer:] Item ID 39 (Carrickfergus 106.7 FM) created and attached to Local.
+[23:14:39] [nPlayer:] Item ID 40 (Blast 106.4 FM) created and attached to Local.
+[23:14:39] [nPlayer:] Category ID 2 (Holidays) created.
+[23:14:39] [nPlayer:] Item ID 41 (Christmas Classics - Word Of Truth Radio) created and attached to Holidays.
+[23:14:39] [nPlayer:] Item ID 42 (Christmas Radio Network) created and attached to Holidays.
+[23:14:39] [nPlayer:] Category ID 3 (Country) created.
+[23:14:39] [nPlayer:] Item ID 43 (181.Fm - Kickin Country - Today's Best Country!) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 44 (DRS 2006 - Country Radio Switzerland) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 45 (CMR Nashville) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 46 (The World Net Radio - Country Oldies) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 47 (181.Fm - Highway 181 (Classic Country)) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 48 (Country 108 - Your Country Music Station - 247) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 49 (1.FM - Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 50 (WKRK Radio) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 51 (1.FM - Absolutely Country Hits) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 52 (Nashville Classics) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 53 (HPR1 - Classic Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 54 (Active Radio US) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 55 (Boot Liquor) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 56 (Nashville FM) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 57 (UK Country Radio) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 58 (Super Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 59 (Country Music24) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 60 (The World Net Radio - Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 61 (Steel Radio) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 62 (Trucknet Radio) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 63 (Lonestar 101 - Texas Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 64 (The New Highway - 40 Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 65 (Radioio - Classic Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 66 (Country Crossroads Radio) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 67 (Radio Country Club) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 68 (KLMR AM Classic Country) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 69 (1.FM - Absolute Country Hits) created and attached to Country.
+[23:14:39] [nPlayer:] Item ID 70 (The Country Top 30) created and attached to Country.
+[23:14:39] [nPlayer:] Category ID 4 (Hardstyle) created.
+[23:14:39] [nPlayer:] Item ID 71 (Hard.FM - The #1 Hardstyle Radio) created and attached to Hardstyle.
+[23:14:39] [nPlayer:] Item ID 72 (Digitally Imported - Hardstyle) created and attached to Hardstyle.
+[23:14:39] [nPlayer:] Item ID 73 (Q-Dance) created and attached to Hardstyle.
+[23:14:39] [nPlayer:] Item ID 74 (Hardsection FM) created and attached to Hardstyle.
+[23:14:39] [nPlayer:] Item ID 75 (Hardbase FM) created and attached to Hardstyle.
+[23:14:39] [nPlayer:] Item ID 76 (Clubsoundz FM) created and attached to Hardstyle.
+[23:14:39] [nPlayer:] Category ID 5 (Dubstep) created.
+[23:14:39] [nPlayer:] Item ID 77 (Dubstep FM) created and attached to Dubstep.
+[23:14:39] [nPlayer:] Item ID 78 (Sensimedia - Strictly Dubstep & Bass) created and attached to Dubstep.
+[23:14:39] [nPlayer:] Item ID 79 (Filth FM) created and attached to Dubstep.
+[23:14:39] [nPlayer:] Item ID 80 (DubstepLive Radio (DNBTV)) created and attached to Dubstep.
+[23:14:39] [nPlayer:] Item ID 81 (Shakedown FM) created and attached to Dubstep.
+[23:14:39] [nPlayer:] Item ID 82 (Digitally Imported - Dubstep) created and attached to Dubstep.
+[23:14:39] [nPlayer:] Item ID 83 (Rough Tempo) created and attached to Dubstep.
+[23:14:39] [nPlayer:] Category ID 6 (Dance) created.
+[23:14:39] [nPlayer:] Item ID 84 (Gaydar Radio) created and attached to Dance.
+[23:14:39] [nPlayer:] Item ID 85 (MaxDance - Trance/Dance) created and attached to Dance.
+[23:14:39] [nPlayer:] Item ID 86 (Energy FM) created and attached to Dance.
+[23:14:39] [nPlayer:] Item ID 87 (Digitally Imported - Hard Dance) created and attached to Dance.
+[23:14:39] [nPlayer:] Item ID 88 (Digitally Imported - Eurodance) created and attached to Dance.
+[23:14:39] [nPlayer:] Item ID 89 (Soundic Radio) created and attached to Dance.
+[23:14:39] [nPlayer:] Item ID 90 (NonStopPlay - Dance Radio) created and attached to Dance.
+[23:14:39] [nPlayer:] Item ID 91 (Gay FM) created and attached to Dance.
+[23:14:39] [nPlayer:] Category ID 7 (Metal) created.
+[23:14:39] [nPlayer:] Item ID 92 (Rockradio1.Com - Classic Hard Rock & Heavy Metal) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 93 (SnakeNet Metal Radio) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 94 (1.FM - High Voltage) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 95 (Netrock101) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 96 (ChroniX Metal) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 97 (Death FM) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 98 (Hard Rock Radio Live) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 99 (Braingell) created and attached to Metal.
+[23:14:39] [nPlayer:] Item ID 100 (Metal Tome) created and attached to Metal.
+[23:14:39] [nPlayer:] Category ID 8 (House) created.
+[23:14:39] [nPlayer:] Item ID 101 (House Radio) created and attached to House.
+[23:14:39] [nPlayer:] Item ID 102 (SSRadio) created and attached to House.
+[23:14:39] [nPlayer:] Item ID 103 (Dance Radio Global - Progressive House) created and attached to House.
+[23:14:39] [nPlayer:] Item ID 104 (ETN fm - House) created and attached to House.
+[23:14:39] [nPlayer:] Category ID 9 (Chillout) created.
+[23:14:39] [nPlayer:] Item ID 105 (Digitally Imported - Chillout Dreams) created and attached to Chillout.
+[23:14:39] [nPlayer:] Item ID 106 (Chillout Radio Greece - Chillout/Ambient/Lounge Music) created and attached to Chillout.
+[23:14:39] [nPlayer:] Item ID 107 (4clubbers) created and attached to Chillout.
+[23:14:39] [nPlayer:] Category ID 10 (80s) created.
+[23:14:39] [nPlayer:] Item ID 108 (Offshore Music Radio) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 109 (More Fm - Classic Rock Radio) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 110 (ABC 80s Ireland) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 111 (Threeten Radio) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 112 (Glam FM) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 113 (Absolute 80s) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 114 (.977 The 80s Channel) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 115 (Kick Radio - 80s & 90s) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 116 (Dance Groove Radio) created and attached to 80s.
+[23:14:39] [nPlayer:] Item ID 117 (80s Planet) created and attached to 80s.
+[23:14:39] [nPlayer:] Category ID 11 (Techno) created.
+[23:14:39] [nPlayer:] Item ID 118 (Techno FM) created and attached to Techno.
+[23:14:39] [nPlayer:] Item ID 119 (JumpStation.FM) created and attached to Techno.
+[23:14:39] [nPlayer:] Category ID 12 (Hardcore) created.
+[23:14:39] [nPlayer:] Item ID 120 (Digitally Imported - Happy Hardcore) created and attached to Hardcore.
+[23:14:39] [nPlayer:] Item ID 121 (Hardcore Radio) created and attached to Hardcore.
+[23:14:39] [nPlayer:] Item ID 122 (Hardcore Power Radio) created and attached to Hardcore.
+[23:14:39] [nPlayer:] Category ID 13 (RnB) created.
+[23:14:39] [nPlayer:] Item ID 123 (Defjay) created and attached to RnB.
+[23:14:39] [nPlayer:] Item ID 124 (KISS) created and attached to RnB.
+[23:14:39] [nPlayer:] Category ID 14 (Rock) created.
+[23:14:39] [nPlayer:] Item ID 125 (Atlantic Sound Factory) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 126 (Regular Rotation) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 127 (Noise FM) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 128 (Idobi Radio) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 129 (Beatles Radio) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 130 (Absolute Radio) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 131 (181.FM - The Eagle (Classic Rock)) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 132 (Rock Radio1) created and attached to Rock.
+[23:14:39] [nPlayer:] Item ID 133 (Megarock Radio) created and attached to Rock.
+[23:14:39] [nPlayer:] Category ID 15 (Drum & Bass) created.
+[23:14:39] [nPlayer:] Item ID 134 (Bassjunkees.com - Drum & Bass, Oldskool, Jungle & Dubstep) created and attached to Drum & Bass.
+[23:14:39] [nPlayer:] Item ID 135 (Digitally Imported - Drum and Bass) created and attached to Drum & Bass.
+[23:14:39] [nPlayer:] Item ID 136 (DnB Heaven) created and attached to Drum & Bass.
+[23:14:39] [nPlayer:] Item ID 137 (DnB Radio) created and attached to Drum & Bass.
+[23:14:39] [nPlayer:] Item ID 138 (UK Bass Radio) created and attached to Drum & Bass.
+[23:14:39] [nPlayer:] Item ID 139 (Destroyer) created and attached to Drum & Bass.
+[23:14:39] [nPlayer:] Item ID 140 (Bassdrive) created and attached to Drum & Bass.
+[23:14:39] [nPlayer:] Category ID 16 (Misc) created.
+[23:14:39] [nPlayer:] Item ID 141 (HIT104 - Your Top 40 Channel) created and attached to Misc.
+[23:14:39] [nPlayer:] Item ID 142 (.977 The Hits Channel) created and attached to Misc.
+[23:14:39] [nPlayer:] Item ID 143 (Jack FM - All Hit Radio) created and attached to Misc.
+[23:14:39] [nPlayer:] Category ID 17 (Electro) created.
+[23:14:39] [nPlayer:] Item ID 144 (Electro Radio) created and attached to Electro.
+[23:14:39] [nPlayer:] Item ID 145 (Digitally Imported - Electro House) created and attached to Electro.
+[23:14:39] [nPlayer:] Item ID 146 (Tuff and Twisted) created and attached to Electro.
+[23:14:39] [nPlayer:] Item ID 147 (House Section FM) created and attached to Electro.
+[23:14:40] Objetos: 1247 carregado(s) de Objetos/Bases.txt
+[23:14:40] Objetos: 3701 carregado(s) de Objetos/Casas.txt
+[23:14:40] Objetos: 1230 carregado(s) de Objetos/Dten.txt
+[23:14:40] Objetos: 390 carregado(s) de Objetos/Games.txt
+[23:14:40] Objetos: 26 carregado(s) de Objetos/Jump.txt
+[23:14:40] Objetos: 1493 carregado(s) de Objetos/Outros.txt
+[23:14:40] ERRO! Falha ao carregar veículos do arquivo Conce/sv.txt (O arquivo não existe no diretório scriptfiles)!
+[23:14:40] Veículos: 0 carregado(s) de Conce/setados.txt
+[23:14:40] Veículos: 3 carregado(s) de vehicles/trains.txt
+[23:14:40] Veículos: 15 carregado(s) de vehicles/lv_law.txt
+[23:14:40] Veículos: 38 carregado(s) de vehicles/sf_law.txt
+[23:14:40] Veículos: 24 carregado(s) de vehicles/ls_law.txt
+[23:14:40] Spawns: 8 carregado(s) de SpawnPositions.txt
+[23:14:40] Aviso: O NÚMERO DE BOMBAS NÃO CORRESPONDE AOS DOS VEÍCULOS CHECADOS
+[23:14:40] 
+
+
+
+Servidor iniciado com sucesso!
+
+
+[23:14:40] Total de Objetos: 8113
+[23:14:40] Total de Pickups: 134
+[23:14:40] Total de Checkpoints: 83
+[23:14:40] Total de Race Checkpoints: 0
+[23:14:40] Total de MapIcons: 131
+[23:14:40] Total de TextLabels: 122
+[23:14:40] Total de Areas: 0
+[23:14:40] 
+
+* Nicks proibidos!
+[23:14:40] * os seguintes nicks estão proibidos de entrar no servidor:
+[23:14:40] 	com[1-9], lpt[1-9], ipt[1-9], clock$, nul, aux, prn, con,
+		com1.aux.[a-zA-Z0-9]
+
+
+[23:14:40] 
+=========================================
+[23:14:40]                 CaféTesting RPG Online              
+[23:14:40] =========================================
+
+[23:14:40] Number of vehicle models: 40
+[23:15:03] [connection] incoming connection: 192.168.15.10:49161 id: 0
+[23:15:03] [join] podecafe has joined the server (0:192.168.15.10)
+[23:15:05] Os animes foram pré carregados para podecafe.
+[23:15:14] [part] podecafe has left the server (0:1)

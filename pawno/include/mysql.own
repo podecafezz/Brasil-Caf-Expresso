@@ -1,0 +1,51 @@
+/*RevolutioN mySQL Functions
+
+Favor não utilizar sem autorização
+Copyright © Infernus Dev. Group
+*/
+#include <a_samp>
+
+stock PRIV_sqlset(table[],col[],value[],where[])
+{
+	new query[256];
+	format(query,sizeof query,"UPDATE %s SET %s = '%s' WHERE %s",table,col,value,where);
+	printf("DEBUG SQLSET: %s",query);
+	if(!samp_mysql_query(query)) return 0;
+	return 1;
+}
+
+stock PRIV_sqldel(table[],where[])
+{
+	new query[256];
+	format(query,sizeof query,"DELETE FROM %s WHERE %s",table,where);
+	printf("DEBUG SQLDEL: %s",query);
+	if(!samp_mysql_query(query)) return 0;
+	return 1;
+}
+
+stock PRIV_sqlget(table[],col[],where[])
+{
+	new query[256],field[128],resultline[1024];
+	format(query,sizeof query,"SELECT %s FROM %s WHERE %s",col,table,where);
+	if(!samp_mysql_query(query)) printf("Erro na query %s executada pela função PRIV_sqlget",query);
+	samp_mysql_store_result();
+	while(samp_mysql_fetch_row(resultline)==1) samp_mysql_strtok(field, "|", resultline);
+	return field;
+}
+
+stock PRIV_sqlins(table[],values[])
+{
+	new query[256];
+	format(query,sizeof query,"INSERT INTO %s VALUES (%s)",table,values);
+	if(!samp_mysql_query(query)) return 0;
+	return 1;
+}
+
+stock ConectarMysql(){
+	//samp_mysql_connect("localhost","root","zyj4599op99");
+	//samp_mysql_connect("localhost","root","dani@1010");
+	samp_mysql_connect("mysql.kinghost.net","infernusgroup01","GeniusEmPawN");
+	//samp_mysql_connect("remote-mysql3.servage.net","infernusgroup01","GeNiuusEmPawN");
+	samp_mysql_select_db("infernusgroup01");
+	return 1;
+}
