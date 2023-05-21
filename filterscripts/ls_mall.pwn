@@ -215,8 +215,6 @@ public OnFilterScriptInit()
 	CreateObject(1995, 1177.71, -1439.63, 14.79,   0.00, 0.00, 0.00, MALL_OBJECT_DRAW_DIST);
 	CreateObject(1994, 1176.73, -1439.63, 14.79,   0.00, 0.00, 0.06, MALL_OBJECT_DRAW_DIST);
 	CreateObject(1993, 1177.83, -1444.15, 14.79,   0.00, 0.00, 179.46, MALL_OBJECT_DRAW_DIST);
-	
+
 	return 1;
 }
-
-//-------------------------------------------------

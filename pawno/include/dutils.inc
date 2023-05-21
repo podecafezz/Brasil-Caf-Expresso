@@ -1,10 +1,10 @@
 /*
- *            DUtils functions 1.10
+ *            DUtils functions 1.9
  *       (c) Copyright 2006-2007 by DracoBlue
  *
  * @author    : DracoBlue (http://dracoblue.com)
  * @date      : 8th April 2006
- * @update    : 12th July 2007
+ * @update    : 21st June. 2007
  *
  * This file is provided as is (no warranties).
  *
@@ -19,7 +19,7 @@
 
 #define MAX_STRING 255
 
-new PRIVATE_Last_Money[MAX_PLAYERS];
+//new PRIVATE_Last_Money[MAX_PLAYERS];
 
 /*
  * First version released by mike, this one created by DracoBlue
@@ -196,10 +196,10 @@ stock trunc(Float:value) {
  *  @param   playerid
  *           howmuch
  */
-stock SetPlayerMoney(playerid,howmuch) {
-  PRIVATE_Last_Money[playerid]=howmuch;
-  GivePlayerMoney(playerid,howmuch-GetPlayerMoney(playerid));
-}
+//stock SetPlayerMoney(playerid,howmuch) {
+//  PRIVATE_Last_Money[playerid]=howmuch;
+//  GivePlayerMoney(playerid,howmuch-GetPlayerMoney(playerid));
+//}
 
 /**
  *  Copies a file (Source file won't be deleted!)
@@ -255,19 +255,6 @@ stock frename(oldname[],newname[]) {
     if (!fexist(oldname)) return false;
     fremove(newname);
     if (!fcopy(oldname,newname)) return false;
-    fremove(oldname);
-    return true;
-}
-
-/**
- *  Renames a file (Source file will be deleted!)
- *  @param   oldname
- *           newname
- */
-stock frenametextfile(oldname[],newname[]) {
-    if (!fexist(oldname)) return false;
-    fremove(newname);
-    if (!fcopytextfile(oldname,newname)) return false;
     fremove(oldname);
     return true;
 }
@@ -376,7 +363,7 @@ stock equal(str1[],str2[],bool:ignorecase) {
  *  @param   string
  *           index
  */
-stock strtok(const string[], &index,seperator=' ')
+strtok(const string[], &index,seperator=' ')
 {
 	new length = strlen(string);
 	new offset = index;

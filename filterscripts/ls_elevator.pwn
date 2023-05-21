@@ -2,14 +2,17 @@
 *   Example elevator system for the new LS building.
 *
 *	Zamaroht 2010
+*
+*   26/08/2011: Kye: added a sound effect for the elevator starting/stopping.
 */
 
 // Warning: This script uses a total of 45 objects, 22 3D Text Labels and 1 dialog.
 
 #include <a_samp>
+#include "../include/gl_common.inc" // for PlaySoundForPlayersInRange()
 
 #define ELEVATOR_SPEED      (5.0)   // Movement speed of the elevator.
-#define DOORS_SPEED         (4.0)   // Movement speed of the doors.
+#define DOORS_SPEED         (5.0)   // Movement speed of the doors.
 #define ELEVATOR_WAIT_TIME  (5000)  // Time in ms that the elevator will wait in each floor before continuing with the queue.
 									// Be sure to give enough time for doors to open.
 
@@ -129,6 +132,7 @@ forward Float:GetElevatorZCoordForFloor(floorid);
 forward Float:GetDoorsZCoordForFloor(floorid);
 
 // ------------------------ Callbacks ------------------------
+
 public OnFilterScriptInit()
 {
 	ResetElevatorQueue();
@@ -171,7 +175,7 @@ public OnObjectMoved(objectid)
 	    Floor_OpenDoors(ElevatorFloor);
 
 	    GetObjectPos(Obj_Elevator, x, y, z);
-	    Label_Elevator	= Create3DTextLabel("Press 'F' to use elevator", 0xFFFFDD, 1784.9822, -1302.0426, z - 0.9, 4.0, 0, 1);
+	    Label_Elevator	= Create3DTextLabel("{CCCCCC}Press '{FFFFFF}~k~~CONVERSATION_YES~{CCCCCC}' to use elevator", 0xCCCCCCAA, 1784.9822, -1302.0426, z - 0.9, 4.0, 0, 1);
 
 	    ElevatorState 	= ELEVATOR_STATE_WAITING;
 	    SetTimer("Elevator_TurnToIdle", ELEVATOR_WAIT_TIME, 0);
@@ -202,7 +206,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
 public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 {
-	if(!IsPlayerInAnyVehicle(playerid) && newkeys & KEY_SECONDARY_ATTACK)
+	if(!IsPlayerInAnyVehicle(playerid) && (newkeys & KEY_YES))
 	{
 	    new Float:pos[3];
 	    GetPlayerPos(playerid, pos[0], pos[1], pos[2]);
@@ -241,7 +245,7 @@ stock Elevator_Initialize()
 	Obj_ElevatorDoors[0] 	= CreateObject(18757, X_DOOR_CLOSED, -1303.459472, GROUND_Z_COORD, 0.000000, 0.000000, 270.000000);
 	Obj_ElevatorDoors[1] 	= CreateObject(18756, X_DOOR_CLOSED, -1303.459472, GROUND_Z_COORD, 0.000000, 0.000000, 270.000000);
 
-	Label_Elevator          = Create3DTextLabel("Press 'F' to use elevator", 0xFFFFDD, 1784.9822, -1302.0426, 13.6491, 4.0, 0, 1);
+	Label_Elevator          = Create3DTextLabel("{CCCCCC}Press '{FFFFFF}~k~~CONVERSATION_YES~{CCCCCC}' to use elevator", 0xCCCCCCAA, 1784.9822, -1302.0426, 13.6491, 4.0, 0, 1);
 
 	new string[128],
 		Float:z;
@@ -251,14 +255,14 @@ stock Elevator_Initialize()
 	    Obj_FloorDoors[i][0] 	= CreateObject(18757, X_DOOR_CLOSED, -1303.171142, GetDoorsZCoordForFloor(i), 0.000000, 0.000000, 270.000000);
 		Obj_FloorDoors[i][1] 	= CreateObject(18756, X_DOOR_CLOSED, -1303.171142, GetDoorsZCoordForFloor(i), 0.000000, 0.000000, 270.000000);
 
-		format(string, sizeof(string), "%s\nPress 'F' to call", FloorNames[i]);
+		format(string, sizeof(string), "{CCCCCC}[%s]\n{CCCCCC}Press '{FFFFFF}~k~~CONVERSATION_YES~{CCCCCC}' to call", FloorNames[i]);
 
 		if(i == 0)
 		    z = 13.4713;
 		else
 		    z = 13.4713 + 8.7396 + ((i-1) * 5.45155);
 
-		Label_Floors[i]         = Create3DTextLabel(string, 0xFFFFDD, 1783.9799, -1300.7660, z, 10.5, 0, 1);
+		Label_Floors[i]         = Create3DTextLabel(string, 0xCCCCCCAA, 1783.9799, -1300.7660, z, 10.5, 0, 1);
 		// Label_Elevator, Text3D:Label_Floors[21];
 	}
 
@@ -323,6 +327,8 @@ stock Floor_OpenDoors(floorid)
 
     MoveObject(Obj_FloorDoors[floorid][0], X_DOOR_L_OPENED, -1303.171142, GetDoorsZCoordForFloor(floorid), DOORS_SPEED);
 	MoveObject(Obj_FloorDoors[floorid][1], X_DOOR_R_OPENED, -1303.171142, GetDoorsZCoordForFloor(floorid), DOORS_SPEED);
+	
+	PlaySoundForPlayersInRange(6401, 50.0, X_DOOR_CLOSED, -1303.171142, GetDoorsZCoordForFloor(floorid) + 5.0);
 
 	return 1;
 }
@@ -333,6 +339,8 @@ stock Floor_CloseDoors(floorid)
 
     MoveObject(Obj_FloorDoors[floorid][0], X_DOOR_CLOSED, -1303.171142, GetDoorsZCoordForFloor(floorid), DOORS_SPEED);
 	MoveObject(Obj_FloorDoors[floorid][1], X_DOOR_CLOSED, -1303.171142, GetDoorsZCoordForFloor(floorid), DOORS_SPEED);
+	
+	PlaySoundForPlayersInRange(6401, 50.0, X_DOOR_CLOSED, -1303.171142, GetDoorsZCoordForFloor(floorid) + 5.0);
 
 	return 1;
 }
@@ -345,9 +353,9 @@ stock Elevator_MoveToFloor(floorid)
 	ElevatorFloor = floorid;
 
 	// Move the elevator slowly, to give time to clients to sync the object surfing. Then, boost it up:
-	MoveObject(Obj_Elevator, 1786.678100, -1303.459472, GetElevatorZCoordForFloor(floorid), 0.5);
-    MoveObject(Obj_ElevatorDoors[0], X_DOOR_CLOSED, -1303.459472, GetDoorsZCoordForFloor(floorid), 0.5);
-    MoveObject(Obj_ElevatorDoors[1], X_DOOR_CLOSED, -1303.459472, GetDoorsZCoordForFloor(floorid), 0.5);
+	MoveObject(Obj_Elevator, 1786.678100, -1303.459472, GetElevatorZCoordForFloor(floorid), 0.25);
+    MoveObject(Obj_ElevatorDoors[0], X_DOOR_CLOSED, -1303.459472, GetDoorsZCoordForFloor(floorid), 0.25);
+    MoveObject(Obj_ElevatorDoors[1], X_DOOR_CLOSED, -1303.459472, GetDoorsZCoordForFloor(floorid), 0.25);
     Delete3DTextLabel(Label_Elevator);
 
 	ElevatorBoostTimer = SetTimerEx("Elevator_Boost", 2000, 0, "i", floorid);
@@ -358,7 +366,10 @@ stock Elevator_MoveToFloor(floorid)
 public Elevator_Boost(floorid)
 {
 	// Increases the elevator's speed until it reaches 'floorid'
-
+	StopObject(Obj_Elevator);
+	StopObject(Obj_ElevatorDoors[0]);
+	StopObject(Obj_ElevatorDoors[1]);
+	
 	MoveObject(Obj_Elevator, 1786.678100, -1303.459472, GetElevatorZCoordForFloor(floorid), ELEVATOR_SPEED);
     MoveObject(Obj_ElevatorDoors[0], X_DOOR_CLOSED, -1303.459472, GetDoorsZCoordForFloor(floorid), ELEVATOR_SPEED);
     MoveObject(Obj_ElevatorDoors[1], X_DOOR_CLOSED, -1303.459472, GetDoorsZCoordForFloor(floorid), ELEVATOR_SPEED);
@@ -496,4 +507,3 @@ stock Float:GetElevatorZCoordForFloor(floorid)
 
 stock Float:GetDoorsZCoordForFloor(floorid)
 	return (GROUND_Z_COORD + FloorZOffsets[floorid]);
-

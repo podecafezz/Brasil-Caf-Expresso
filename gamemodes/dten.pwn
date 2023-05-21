@@ -1,5 +1,5 @@
 /*
-		Brasil Virtual Online
+		Brasil Cafe Expresso
 			By Tercio_Felipe and Junior
 				http://life-samp.blogspot.com/
 
@@ -85,18 +85,18 @@ A medida que for preciso estarei adicionando mais comandos existentes aqui.
 // =================================================================================
 
 // Configurações de Informação
-#define GM_VERSAO [RPG]CaféLand
+#define GM_VERSAO [RPG]Sub-Mundo
 
-#define VCL_SERVER_IP 54.39.250.193:7768
-#define VCL_SERVER_SITE Em Breve
+#define VCL_SERVER_IP 200.98.137.169:7792
+#define VCL_SERVER_SITE www.submundo.tk
 
-#define MAPA_NOME Brasil [RPG]BCE
+#define MAPA_NOME Brasil [RPG]Sub-Mundo
 
 #if defined HostNameRandUser
-	#define SERVER_NOME_1 "[RPG]BR-PT CafeLand BRASIL"#
-	#define SERVER_NOME_2 "CafeLand - 75 e Estudo 50 Go Go"#
-	#define SERVER_NOME_3 "[RPG]BR-PT CafeLand BRASIL"#
-	#define SERVER_NOME_4 "Venha Tomar Café Com A Gente!!"#
+	#define SERVER_NOME_1 "[RPG]_Brasil Sub Mundo - Oficial 24 Hrs"#
+	#define SERVER_NOME_2 "Brasil Sub Mundo - Oficial 50 e Estudo 50 Go Go"#
+	#define SERVER_NOME_3 "[RPG]_Brasil Sub Mundo - Oficial 24 Hrs"#
+	#define SERVER_NOME_4 "Sua 2 Vida Comecar Aqui Brasil Sub Mundo"#
 #endif
 
 #define GAMEMOD_NOME ""#GM_VERSAO""
@@ -109,9 +109,9 @@ A medida que for preciso estarei adicionando mais comandos existentes aqui.
 
 #define MAX_CONNECTIONS_FROM_IP 3
 
-#define MAX_PLAYER_LEVEL 5000000
-#define MAX_PLAYER_ESTUDO 500000
-#define MAX_PLAYER_EXP 10
+#define MAX_PLAYER_LEVEL 50000
+#define MAX_PLAYER_ESTUDO 500
+#define MAX_PLAYER_EXP 5
 #define MAX_PLAYER_CONCE 7
 #define MAX_COMB 100
 #define TEMPO_EXP 1
@@ -794,7 +794,7 @@ new gVehicleBombs[][] =
 
 new MSGs[19][] =
 {
-	"» [BCE] - Seja Bem Vindo ao Brasil Cafe Expresso City! - Café é Vida",
+	"» [BCE] - Seja Bem Vindo ao Brasil Cafe Expresso",
 	"» [BCE] - Para ver as informações de um veículo use próximo a ele, /infocarro.",
 	"» [BCE] - Está afim de alguem? então peça em casamento. Use = /pedircasamento",
 //	"» [BCE] - Usando = /comprarveiculo [conceid] de longe você conseguirá comprar seu Veiculo.",
@@ -809,11 +809,11 @@ new MSGs[19][] =
 	"» [BCE] - Veja os créditos do servidor, Use = /creditos",
 	"» [BCE] - Nunca esqueça de ler as regras, Use = /regras",
 	"» [BCE] - Para ver os teleportes, Use = /teles",
-	"» [BCE] - Entre no Discord! (AufgUZM).",
+	"» [BCE] - Em Breve nosso Forum estará disponivel.",
 	"» [BCE] - Voce Tem Uma casa, Use = /minhacasa",
 	"» [BCE] - Voce Tem Uma Prop, Use = /minhaprop",
 	"» [BCE] - Atenção, cada jogador, só poderá adiquirir 7 Carros, Compre o seu no /Detran. ",
-	"» [BCE] - Equipe Brasil Cafe Expresso City, agradeçe sua presença."
+	"» [BCE] - Equipe Brasil Cafe Expresso, agradeçe sua presença."
 };
 
 new peixes[10][] =
@@ -2004,7 +2004,7 @@ main()
 	print("\tcom[1-9], lpt[1-9], ipt[1-9], clock$, nul, aux, prn, con,\n\t\tcom1.aux.[a-zA-Z0-9]\n\n");
 
 	print("\n=========================================");
-	print("                CaféTesting RPG Online              ");
+	print("                BCE RPG Online              ");
 	print("=========================================\n");
 }
 
@@ -2386,7 +2386,7 @@ public AC_OnCheatDetected(playerid, type, extraint, Float:extrafloat)
 			}
 			if(PingCfg == 2)
 			{
-				format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo Cafe-Bot. Motivo: Ping Alto, Max: 1700", PlayerName(playerid));
+				format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo BCE-Bot. Motivo: Ping Alto, Max: 1700", PlayerName(playerid));
 				SendClientMessageToAll(Amarelo, STRX);
 				KickLog(STRX);
 				Kick(playerid);
@@ -2492,7 +2492,7 @@ public AC_OnCheatDetected(playerid, type, extraint, Float:extrafloat)
 		case CHEAT_SPECTATE:
 		{
 			SendClientMessage(playerid, Vermelho, "SpectateHack detectado, não tente usar Cheat/Hack ou será banido(a).");
-			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo Cafe-Bot. Motivo: SpectateHack", PlayerName(playerid));
+			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo BCE-Bot. Motivo: SpectateHack", PlayerName(playerid));
 			SendClientMessageToAll(Amarelo, STRX);
 			KickLog(STRX);
 			Kick(playerid);
@@ -2506,7 +2506,7 @@ public AC_OnCheatDetected(playerid, type, extraint, Float:extrafloat)
 		case CHEAT_REMOTECONTROL:
 		{
 			SendClientMessage(playerid, Vermelho, "RemoteControl detectado, não tente usar Cheat/Hack ou será banido(a).");
-			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo Cafe-Bot. Motivo: RemoteControl", PlayerName(playerid));
+			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo BCE-Bot. Motivo: RemoteControl", PlayerName(playerid));
 			SendClientMessageToAll(Amarelo, STRX);
 			KickLog(STRX);
 			Kick(playerid);
@@ -2515,7 +2515,7 @@ public AC_OnCheatDetected(playerid, type, extraint, Float:extrafloat)
 		case CHEAT_MASSCARTELEPORT:
 		{
 			SendClientMessage(playerid, Vermelho, "MassCarTeleport detectado, não tente usar Cheat/Hack ou será banido(a).");
-			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo Cafe-Bot. Motivo: MassCarTeleport", PlayerName(playerid));
+			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo BCE-Bot. Motivo: MassCarTeleport", PlayerName(playerid));
 			SendClientMessageToAll(Amarelo, STRX);
 			KickLog(STRX);
 			Kick(playerid);
@@ -2524,7 +2524,7 @@ public AC_OnCheatDetected(playerid, type, extraint, Float:extrafloat)
 		case CHEAT_CARJACKHACK:
 		{
 			SendClientMessage(playerid, Vermelho, "CarJackHack detectado, não tente usar Cheat/Hack ou será banido(a).");
-			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo Cafe-Bot. Motivo: CarJackHack", PlayerName(playerid));
+			format(STRX, sizeof(STRX), "O(A) jogador(a) %s foi kickado(a) pelo BCE-Bot. Motivo: CarJackHack", PlayerName(playerid));
 			SendClientMessageToAll(Amarelo, STRX);
 			KickLog(STRX);
 			Kick(playerid);
@@ -2748,7 +2748,7 @@ public OnPlayerRequestClass(playerid, classid)
 	return 1;
 }
 
-/*public OnPlayerConnect(playerid)
+public OnPlayerConnect(playerid)
 {
 
     RemoveBuildingForPlayer(playerid, 4024, 1479.8672, -1790.3984, 56.0234, 0.25);
@@ -2858,7 +2858,7 @@ public OnPlayerRequestClass(playerid, classid)
     RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1647.6406, 16.4219, 0.25);//pracinha
     RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1621.9609, 16.4219, 0.25);//pracinha
     RemoveBuildingForPlayer(playerid, 1226, 1525.3828, -1611.1563, 16.4219, 0.25);//pracinha
-*/
+
 	new szPlayerName[MAX_PLAYER_NAME], connecting_ip[32+1];
 	GetPlayerName(playerid, szPlayerName, MAX_PLAYER_NAME);
 	format(file2, sizeof(file2), PASTA_CONTAS, encrypt(szPlayerName)); // Criptografado
@@ -3069,8 +3069,8 @@ public OnPlayerRequestClass(playerid, classid)
     SendClientMessage(playerid, BLUEWHITE, "~•~ ~•~ ~•~ ~•~ ~•~ Bem vindo! [BCE-RPG] ~•~ ~•~ ~•~ ~•~ ~•~");
     SendClientMessage(playerid, Vermelho, "» Para ver os comandos, use /comandos"					     );
 	SendClientMessage(playerid, Azul, "» Para ver as regras, use /regras"							     );
-	SendClientMessage(playerid, Verde, "» Dono: podecafe, /Creditos"                    );
-	SendClientMessage(playerid, Azul, "» Creditos do GM: Tercio_felipe - Poseidon!"											 );
+	SendClientMessage(playerid, Verde, "» Dono: podecafe, /Creditos"                                     );
+	SendClientMessage(playerid, Azul, "» Creditos do GM: Tercio_felipe & Poseidon!"						 );
 	SendClientMessage(playerid, Vermelho, "» Sua diversao esta Aqui, Seja bem vindo ao (BCE) :D"         );
 	SendClientMessage(playerid, Vermelho, "» Nosso Forum ainda está sendo Construido."                   );
     SendClientMessage(playerid, BLUEWHITE, "~•~ ~•~ ~•~ ~•~ ~•~ Bem vindo! [BCE-RPG] ~•~ ~•~ ~•~ ~•~ ~•~");
@@ -3419,18 +3419,18 @@ public OnPlayerDisconnect(playerid, reason)
 		format(string, sizeof(string), "{FFFFFF}-| {33AA33}%s {FFFFFF}saiu para mudar de nick.", PlayerName(playerid));
 		switch(reason)
 		{
-			case 0: format(string, sizeof(string), "{FFFF00}-| {33AA33}%s {FFFF00}Saiu Do Servidor (Culpa do Provedor)", PlayerName(playerid));
+			case 0: format(string, sizeof(string), "{FFFF00}-| {33AA33}%s {FFFF00}Saiu Do Servidor (Net da XuXa)", PlayerName(playerid));
 			case 1: format(string, sizeof(string), "{FF6600}-| {33AA33}%s {FF6600}Saiu Do Servidor (Vontade própria)", PlayerName(playerid));
-			case 2: format(string, sizeof(string), "{FFFFFF}-| {33AA33}%s {FFFFFF}Saiu Do Servidor (Kick/Ban).", PlayerName(playerid));
+			case 2: format(string, sizeof(string), "{FFFFFF}-| {33AA33}%s {FFFFFF}Saiu Do Servidor (Vacilou!Foi Kickado/Banido).", PlayerName(playerid));
 		}
 	}
 	else
 	{
 		switch(reason)
 		{
-			case 0: format(string, sizeof(string), "{FFFF00}-| {33AA33}%s {FFFF00}Saiu Do Servidor (Culpa do Provedor)", PlayerName(playerid));
+			case 0: format(string, sizeof(string), "{FFFF00}-| {33AA33}%s {FFFF00}Saiu Do Servidor (Net da XuXa)", PlayerName(playerid));
 			case 1: format(string, sizeof(string), "{FF6600}-| {33AA33}%s {FF6600}Saiu Do Servidor (Vontade Própria)", PlayerName(playerid));
-			case 2: format(string, sizeof(string), "{FFFFFF}-| {33AA33}%s {FFFFFF}Saiu Do Servidor (Kick/Ban)", PlayerName(playerid));
+			case 2: format(string, sizeof(string), "{FFFFFF}-| {33AA33}%s {FFFFFF}Saiu Do Servidor (Vacilou!Foi Kickado/Banido)", PlayerName(playerid));
 		}
 	}
 	SendClientMessageToAll(-1, string);
@@ -3585,7 +3585,7 @@ public OnPlayerSpawn(playerid)
 		// Casamento
 		if(dini_Int(file, "Casado") == 3)
 		{
-			format(string, sizeof(string), "%s se divorciou de você.\n.", dini_Get(file, "CasouCom"));
+			format(string, sizeof(string), "%s se divorciou de você.\nNão perca tempo, case com outro(a).", dini_Get(file, "CasouCom"));
 
 			dini_IntSet(file, "Casado", 0);
 			dini_Set(file, "CasouCom", "Ninguem");
@@ -3878,7 +3878,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	}
 	else if(FloodAlert[playerid] == AlertFlood)
 	{
-		format(string, sizeof(string), "O(A) jogador(a) %s foi kickado(a) pelo Cafe-Bot. Motivo: Flood Comando", PlayerName(playerid));
+		format(string, sizeof(string), "O(A) jogador(a) %s foi kickado(a) pelo BCE-Bot. Motivo: Flood Comando", PlayerName(playerid));
 		SendClientMessageToAll(Amarelo, string);
 		KickLog(string);
 		Kick(playerid);
@@ -13188,7 +13188,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
 	if(strcmp("/creditos", cmdtext, true, 10) == 0)
 	{
-		ShowPlayerDialog(playerid, Creditos, DIALOG_STYLE_MSGBOX, "Creditos", "Donos:podecafe\nCriadores: Tercio_Felipe e Poseidon\nForum nao foi criado ainda.\nGM BCE!", "OK", "");
+		ShowPlayerDialog(playerid, Creditos, DIALOG_STYLE_MSGBOX, "Creditos", "Dono: podecafe\nServidor em Desenvolvimento\nNada de Forum por hora!.", "OK", "");
 		return 1;
 	}
 
@@ -19151,12 +19151,12 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			{
 				if(!dini_Exists(file))
 				{
-					format(STRX, sizeof(STRX),"{A020F0}Bem Vindo (a)\n\nConta: {FF0000}Não Registrada\n\n{EE82EE}Use: {FFFFFF}Nome\n\n{FFFFFF} Brasil{00FF00}Cafe{0000FF}Expresso{FFFFFF}\n\n\nDigite Sua Senha Para Registrar ! ", aname);
+					format(STRX, sizeof(STRX),"{A020F0}Bem Vindo (a)\n\nConta: {FF0000}Não Registrada\n\n{EE82EE}Use: {FFFFFF}Nome\n\n{FFFFFF} www.{00FF00}submundo{0000FF}rpg.{FFFFFF}tk\n\n\nDigite Sua Senha Para Registrar ! ", aname);
 					ShowPlayerDialog(playerid, REGISTRO, DIALOG_STYLE_PASSWORD, "CONTA", STRX, "Registrar", "Sair");
 				}
 				if(dini_Exists(file))
 				{
-					format(STRX, sizeof(STRX),"{A020F0}Bem Vindo (a)\n\nConta: {00FF00}Registrada\n\n{FFFFFF} Brasil{00FF00}Cafe{0000FF}Expresso{FFFFFF}\n\n\nDigite Sua Senha Para Logar ! ", aname);
+					format(STRX, sizeof(STRX),"{A020F0}Bem Vindo (a)\n\nConta: {00FF00}Registrada\n\n{FFFFFF} www.{00FF00}submundo{0000FF}rpg.{FFFFFF}tk\n\n\nDigite Sua Senha Para Logar ! ", aname);
 					ShowPlayerDialog(playerid, LOGIN, DIALOG_STYLE_PASSWORD, "CONTA", STRX, "Logar", "Sair");
 				}
 			}
@@ -19331,7 +19331,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 				else
 				{
 					SendClientMessage(playerid, Vermelho, "Senha incorreta!");
-                    format(STRX, sizeof(STRX),"{A020F0}Bem Vindo (a)\n\nConta: {00FF00}Registrada\n\n{FFFFFF} Brasil{00FF00}Cafe{0000FF}Expresso{FFFFFF}\n\n\nDigite Sua Senha Para Logar ! ", aname);
+                    format(STRX, sizeof(STRX),"{A020F0}Bem Vindo (a)\n\nConta: {00FF00}Registrada\n\n{FFFFFF} www.{00FF00}submundo{0000FF}rpg.{FFFFFF}tk\n\n\nDigite Sua Senha Para Logar ! ", aname);
 					ShowPlayerDialog(playerid, LOGIN, DIALOG_STYLE_PASSWORD, "CONTA", STRX, "Logar", "Sair");
 				}
 			}
@@ -33579,7 +33579,7 @@ stock LoadPlayerIntroText(playerid)
 	TextDrawFont(Intro[playerid][9], 1);
 	TextDrawLetterSize(Intro[playerid][9], 23.250051, 1.099999);
 
-	Intro[playerid][10] = TextDrawCreate(300.00, 223.0, "~r~BCE~w~-~g~RPG");
+	Intro[playerid][10] = TextDrawCreate(300.00, 223.0, "~r~Sub~w~-~g~Mundo");
 	TextDrawFont(Intro[playerid][10], 2);
 	TextDrawLetterSize(Intro[playerid][10], 0.340000, 1.099999);
 

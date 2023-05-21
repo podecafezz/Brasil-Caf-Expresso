@@ -248,7 +248,12 @@ new AttachmentObjects[][AttachmentEnum] = {
 {19349, "monocle01"},
 {19350, "moustache01"},
 {19351, "moustache02"},
-{19352, "tophat01"}
+{19352, "tophat01"},
+{19487, "tophat02"},
+{19488, "HatBowler6"},
+{19513, "whitephone"},
+{19578, "Banana"},
+{19418, "HandCuff"}
 };
 
 new AttachmentBones[][24] = {
@@ -314,12 +319,14 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
                 SetPVarInt(playerid, "AttachmentIndexSel", listitem);
             }
+            return 1;
         }
         case DIALOG_ATTACH_EDITREPLACE:
         {
             if(response) EditAttachedObject(playerid, GetPVarInt(playerid, "AttachmentIndexSel"));
             else RemovePlayerAttachedObject(playerid, GetPVarInt(playerid, "AttachmentIndexSel"));
             DeletePVar(playerid, "AttachmentIndexSel");
+            return 1;
         }
         case DIALOG_ATTACH_MODEL_SELECTION:
         {
@@ -339,6 +346,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 }
             }
             else DeletePVar(playerid, "AttachmentIndexSel");
+            return 1;
         }
         case DIALOG_ATTACH_BONE_SELECTION:
         {
@@ -350,9 +358,10 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
             }
             DeletePVar(playerid, "AttachmentIndexSel");
             DeletePVar(playerid, "AttachmentModelSel");
+            return 1;
         }
     }
-    return 1;
+    return 0;
 }
 
 public OnPlayerEditAttachedObject( playerid, response, index, modelid, boneid,
@@ -360,7 +369,15 @@ public OnPlayerEditAttachedObject( playerid, response, index, modelid, boneid,
                                    Float:fRotX, Float:fRotY, Float:fRotZ,
                                    Float:fScaleX, Float:fScaleY, Float:fScaleZ )
 {
-    SendClientMessage(playerid, 0xFFFFFFFF, "You finished editing an attached object");
+    new debug_string[256+1];
+	format(debug_string,256,"SetPlayerAttachedObject(playerid,%d,%d,%d,%f,%f,%f,%f,%f,%f,%f,%f,%f)",
+           index,modelid,boneid,fOffsetX,fOffsetY,fOffsetZ,fRotX,fRotY,fRotZ,fScaleX,fScaleY,fScaleZ);
+
+	print(debug_string);
+    SendClientMessage(playerid, 0xFFFFFFFF, debug_string);
+    
     SetPlayerAttachedObject(playerid,index,modelid,boneid,fOffsetX,fOffsetY,fOffsetZ,fRotX,fRotY,fRotZ,fScaleX,fScaleY,fScaleZ);
+    SendClientMessage(playerid, 0xFFFFFFFF, "You finished editing an attached object");
+    
     return 1;
 }

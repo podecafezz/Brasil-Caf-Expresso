@@ -65,4 +65,6 @@ public OnPlayerConnect(playerid)
 	SetPlayerMapIcon(playerid,96,-1509.4,2611.8,58.5,6,0,MAPICON_LOCAL);
 	SetPlayerMapIcon(playerid,97,-315.67,829.87,13.43,6,0,MAPICON_LOCAL);
 	SetPlayerMapIcon(playerid,98,2332.9,63.6,31.0,6,0,MAPICON_LOCAL);
+	
+	return 1;
 }

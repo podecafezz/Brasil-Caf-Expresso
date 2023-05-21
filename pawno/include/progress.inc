@@ -1,7 +1,7 @@
 /**
  *  Progress Bar 1.3.1.0
  *  Copyright 2007-2010 Infernus' Group,
- *  Fl·vio Toribio (flavio_toibio@hotmail.com)
+ *  Fl√°vio Toribio (flavio_toribio@hotmail.com)
  */
 
 #if defined _progress_included

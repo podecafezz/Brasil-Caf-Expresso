@@ -8,10 +8,10 @@ Author: Jones N. Sperandio
 Release date: 26/02/2010
 
 __________________________
-Description/Descrição
+Description/DescriÃ§Ã£o
 
 PT:
-Provê proteção contra money hack, sem que seja preciso alterar várias linhas de
+ProvÃª proteÃ§Ã£o contra money hack, sem que seja preciso alterar vÃ¡rias linhas de
 um script.
 
 EN:
@@ -23,7 +23,7 @@ Notes/Notas
 PT:
 Caso seja usado em um filterscript, o mesmo deve conter a diretiva
 #define FILTERSCRIPT, antes da diretiva #include, e o gamemode precisa ter sido
-compilado com o include também.
+compilado com o include tambÃ©m.
 
 EN:
 In case of a filterscript, it must contain the directive #define FILTERSCRIPT

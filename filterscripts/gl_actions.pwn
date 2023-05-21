@@ -141,9 +141,24 @@ public OnPlayerCommandText(playerid, cmdtext[])
         SendClientMessage(playerid,0xAFAFAFAA,"/crossarms /lay /hide /vomit /eat /wave /taichi");
         SendClientMessage(playerid,0xAFAFAFAA,"/deal /crack /smokem /smokef /groundsit /chat /dance /f**ku");
 	}
+
+    if(strcmp(cmd, "/amcuffed", true) == 0) {
+		  // note: the cuffs have not been scaled for all player models
+    	 SetPlayerAttachedObject(playerid,8,19418,6,-0.031999,0.024000,-0.024000,-7.900000,-32.000011,-72.299987,1.115998,1.322000,1.406000);
+    	 SetPlayerSpecialAction(playerid, SPECIAL_ACTION_CUFFED);
+         return 1;
+	}
+
+	 if(strcmp(cmd, "/uncuffme", true) == 0) {
+		 if(IsPlayerAttachedObjectSlotUsed(playerid, 8)) {
+			RemovePlayerAttachedObject(playerid, 8);
+		 }
+         SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
+         return 1;
+	}
 	
+	// We don't handle anything else after this that can be used in vehicles
 	if(GetPlayerState(playerid) != PLAYER_STATE_ONFOOT) {
-        // We don't handle anything here that can be used InVehicle
         return 0;
 	}
 
@@ -279,6 +294,35 @@ public OnPlayerCommandText(playerid, cmdtext[])
          return 1;
     }
     
+    // Collapse
+    if(strcmp(cmd, "/collapse", true) == 0) {
+		 LoopingAnim(playerid,"PED","FALL_COLLAPSE",4.0,1,0,0,0,0);
+         return 1;
+    }
+    
+     // fall
+    if(strcmp(cmd, "/fallover", true) == 0) {
+		 LoopingAnim(playerid,"PED","FALL_FALL",4.0,1,0,0,0,0);
+         return 1;
+    }
+
+    // ko
+    if(strcmp(cmd, "/ko1", true) == 0) {
+		 LoopingAnim(playerid,"PED","KO_SHOT_STOM",200.0, 0, 1, 1, 1, -1);
+         return 1;
+    }
+    
+    // ko
+    if(strcmp(cmd, "/ko2", true) == 0) {
+		 LoopingAnim(playerid,"PED","KO_SHOT_FACE",4.0, 0, 1, 1, 1, -1);
+         return 1;
+    }
+    
+    if(strcmp(cmd, "/floorhit", true) == 0) {
+         ApplyAnimation(playerid,"PED", "FLOOR_hit_f", 4.1, 0, 0, 0, 1, 0);
+         return 1;
+    }
+
     /* Would allow people to troll... but would be cool as a script
 	   controlled function
     // Bed Sleep R
@@ -291,7 +335,6 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		 LoopingAnim(playerid,"INT_HOUSE","BED_Loop_L",4.0,1,0,0,0,0);
          return 1;
     }*/
-    
 
 	// START DANCING
  	if(strcmp(cmd, "/dance", true) == 0) {

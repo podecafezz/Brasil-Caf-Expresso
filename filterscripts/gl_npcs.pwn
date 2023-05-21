@@ -14,14 +14,14 @@ public OnFilterScriptInit()
 	ConnectNPC("TrainDriverLV","train_lv");
 	ConnectNPC("TrainDriverLS","train_ls");
 	ConnectNPC("TrainDriverSF","train_sf");
-	
 	ConnectNPC("PilotLV","at400_lv");
 	ConnectNPC("PilotSF","at400_sf");
 	ConnectNPC("PilotLS","at400_ls");
-
+	
 	// Testing
-	//ConnectNPC("TestIdle","onfoot_test");
-	//ConnectNPC("TaxiTest","mat_test");
+	//ConnectNPC("OnfootTest","onfoot_test");
+	//ConnectNPC("DriverTest","mat_test2");
+	//ConnectNPC("DriverTest2","driver_test2");
 
 	return 1;
 }
@@ -83,14 +83,26 @@ public OnPlayerRequestClass(playerid, classid)
 	else if(!strcmp(playername,"PilotLS",true)) {
 	    SetSpawnInfo(playerid,69,61,0.0,0.0,0.0,0.0,-1,-1,-1,-1,-1,-1);
 	}
-	else if(!strcmp(playername,"TestIdle",true)) {
+	else if(!strcmp(playername,"OnfootTest",true)) {
 	    SetSpawnInfo(playerid,69,61,2388.1003,-1279.8933,25.1291,94.3321,-1,-1,-1,-1,-1,-1);
 	}
-	else if(!strcmp(playername,"TaxiTest",true)) {
-	    SetSpawnInfo(playerid,69,61,0.0,0.0,0.0,0.0,-1,-1,-1,-1,-1,-1);
+	else if(!strcmp(playername,"DriverTest",true)) {
+	    SetSpawnInfo(playerid,69,61,2388.1003,-1279.8933,25.1291,94.3321,-1,-1,-1,-1,-1,-1);
+	}
+	else if(!strcmp(playername,"DriverTest2",true)) {
+	    SetSpawnInfo(playerid,69,61,2388.1003,-1279.8933,25.1291,94.3321,-1,-1,-1,-1,-1,-1);
 	}
 
 	return 0;
+}
+
+//-------------------------------------------------
+
+stock SetVehicleTireStatus(vehicleid, tirestatus)
+{
+    new panels, doors, lights, tires;
+    GetVehicleDamageStatus(vehicleid, panels, doors, lights, tires);
+    UpdateVehicleDamageStatus(vehicleid, panels, doors, lights, tirestatus);
 }
 
 //-------------------------------------------------
@@ -126,11 +138,17 @@ public OnPlayerSpawn(playerid)
 	    PutPlayerInVehicle(playerid,15,0);
 	    SetPlayerColor(playerid,0xFFFFFFFF);
 	}
-	else if(!strcmp(playername,"TestIdle",true)) {
+	else if(!strcmp(playername,"OnfootTest",true)) {
+	    //PutPlayerInVehicle(playerid,876,0);
 	    SetPlayerColor(playerid,0xFFFFFFFF);
 	}
-	else if(!strcmp(playername,"TaxiTest",true)) {
-	    PutPlayerInVehicle(playerid,650,0);
+	else if(!strcmp(playername,"DriverTest",true)) {
+	    PutPlayerInVehicle(playerid,376,0);
+	    SetPlayerColor(playerid,0xFFFFFFFF);
+	}
+	else if(!strcmp(playername,"DriverTest2",true)) {
+		//SetVehicleTireStatus(876,0xFF);
+	    PutPlayerInVehicle(playerid,875,0);
 	    SetPlayerColor(playerid,0xFFFFFFFF);
 	}
 

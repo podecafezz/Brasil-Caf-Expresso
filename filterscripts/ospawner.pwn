@@ -135,7 +135,7 @@ PlayerText:CreateModelPreviewTextDraw(playerid, modelindex, Float:Xpos, Float:Yp
     PlayerTextDrawBackgroundColor(playerid, txtPlayerSprite, 0x88888899);
     PlayerTextDrawTextSize(playerid, txtPlayerSprite, width, height); // Text size is the Width:Height
     PlayerTextDrawSetPreviewModel(playerid, txtPlayerSprite, modelindex);
-    if(modelindex > 300) {
+    if(modelindex > 319) {
     	PlayerTextDrawSetPreviewRot(playerid,txtPlayerSprite, -15.0, 0.0, 0.0);
 	}
     PlayerTextDrawSetSelectable(playerid, txtPlayerSprite, 1);
@@ -279,7 +279,7 @@ SpawnObject_InfrontOfPlayer(playerid, model)
 
 HandlePlayerItemSelection(playerid, selecteditem)
 {
-    if(gSelectionItemsTag[playerid][selecteditem] >= 0 && gSelectionItemsTag[playerid][selecteditem] < 300) {
+    if(gSelectionItemsTag[playerid][selecteditem] >= 0 && gSelectionItemsTag[playerid][selecteditem] < 319) {
         SetPlayerSkin(playerid, gSelectionItemsTag[playerid][selecteditem]);
 		return;
 	}
@@ -404,7 +404,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
 		DestroySelectionMenu(playerid);
 
 	    SetPVarInt(playerid, "ospawner_active", 1);
-	    SetPVarInt(playerid, "ospawner_page", 905);
+	    SetPVarInt(playerid, "ospawner_page", 1);
 	    
 	    CreateSelectionMenu(playerid);
 	    SelectTextDraw(playerid, 0xACCBF1FF);

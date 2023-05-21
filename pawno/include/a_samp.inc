@@ -1,6 +1,6 @@
 /*  SA-MP Functions
  *
- *  (c) Copyright 2005-2010, SA-MP Team
+ *  (c) Copyright 2005-2015, SA-MP Team
  *
  */
 
@@ -23,23 +23,27 @@
 #include <a_players>
 #include <a_vehicles>
 #include <a_objects>
+#include <a_actor>
 #include <a_sampdb>
 
 // Limits and internal constants
 #define MAX_PLAYER_NAME							(24)
-#define MAX_PLAYERS								(500)
+#define MAX_PLAYERS								(1000)
 #define MAX_VEHICLES							(2000)
+#define MAX_ACTORS								(1000)
 #define INVALID_PLAYER_ID						(0xFFFF)
 #define INVALID_VEHICLE_ID						(0xFFFF)
+#define INVALID_ACTOR_ID						(0xFFFF)
 #define NO_TEAM									(255)
-#define MAX_OBJECTS								(400)
+#define MAX_OBJECTS								(1000)
 #define INVALID_OBJECT_ID						(0xFFFF)
 #define MAX_GANG_ZONES							(1024)
 #define MAX_TEXT_DRAWS							(2048)
+#define MAX_PLAYER_TEXT_DRAWS					(256)
 #define MAX_MENUS								(128)
 #define MAX_3DTEXT_GLOBAL						(1024)
 #define MAX_3DTEXT_PLAYER						(1024)
-#define MAX_PICKUPS								(2048)
+#define MAX_PICKUPS								(4096)
 #define INVALID_MENU							(0xFF)
 #define INVALID_TEXT_DRAW						(0xFFFF)
 #define INVALID_GANG_ZONE						(-1)
@@ -57,7 +61,8 @@ native SendClientMessage(playerid, color, const message[]);
 native SendClientMessageToAll(color, const message[]);
 native SendPlayerMessageToPlayer(playerid, senderid, const message[]);
 native SendPlayerMessageToAll(senderid, const message[]);
-native SendDeathMessage(killer,killee,weapon);
+native SendDeathMessage(killer, killee, weapon);
+native SendDeathMessageToPlayer(playerid, killer, killee, weapon);
 native GameTextForAll(const string[],time,style);
 native GameTextForPlayer(playerid,const string[],time,style);
 native SetTimer(funcname[], interval, repeating);
@@ -67,10 +72,36 @@ native GetTickCount();
 native GetMaxPlayers();
 native CallRemoteFunction(const function[], const format[], {Float,_}:...);
 native CallLocalFunction(const function[], const format[], {Float,_}:...);
+native Float:VectorSize(Float:x, Float:y, Float:z);
 native Float:asin(Float:value);
 native Float:acos(Float:value);
 native Float:atan(Float:value);
 native Float:atan2(Float:x, Float:y);
+native GetPlayerPoolSize();
+native GetVehiclePoolSize();
+native GetActorPoolSize();
+
+// Hash
+native SHA256_PassHash(password[], salt[], ret_hash[], ret_hash_len); // SHA256 for password hashing
+
+// Server wide persistent variable system (SVars)
+native SetSVarInt(varname[], int_value);
+native GetSVarInt(varname[]);
+native SetSVarString(varname[], string_value[]);
+native GetSVarString(varname[], string_return[], len);
+native SetSVarFloat(varname[], Float:float_value);
+native Float:GetSVarFloat(varname[]);
+native DeleteSVar(varname[]);
+
+// SVar enumeration
+#define	SERVER_VARTYPE_NONE			0
+#define SERVER_VARTYPE_INT			1
+#define SERVER_VARTYPE_STRING		2
+#define SERVER_VARTYPE_FLOAT		3
+
+native GetSVarsUpperIndex();
+native GetSVarNameAtIndex(index, ret_varname[], ret_len);
+native GetSVarType(varname[]);
 
 // Game
 native SetGameModeText(const string[]);
@@ -78,7 +109,7 @@ native SetTeamCount(count);
 native AddPlayerClass(modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, weapon1, weapon1_ammo, weapon2, weapon2_ammo, weapon3, weapon3_ammo);
 native AddPlayerClassEx(teamid, modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, weapon1, weapon1_ammo, weapon2, weapon2_ammo, weapon3, weapon3_ammo);
 native AddStaticVehicle(modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, color1, color2);
-native AddStaticVehicleEx(modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, color1, color2, respawn_delay);
+native AddStaticVehicleEx(modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, color1, color2, respawn_delay, addsiren=0);
 native AddStaticPickup(model, type, Float:X, Float:Y, Float:Z, virtualworld = 0);
 native CreatePickup(model, type, Float:X, Float:Y, Float:Z, virtualworld = 0);
 native DestroyPickup(pickup);
@@ -87,7 +118,8 @@ native ShowPlayerMarkers(mode);
 native GameModeExit();
 native SetWorldTime(hour);
 native GetWeaponName(weaponid, const weapon[], len);
-native EnableTirePopping(enable);
+native EnableTirePopping(enable); // deprecated function
+native EnableVehicleFriendlyFire();
 native AllowInteriorWeapons(allow);
 native SetWeather(weatherid);
 native SetGravity(Float:gravity);
@@ -112,9 +144,32 @@ native Kick(playerid);
 native Ban(playerid);
 native BanEx(playerid, const reason[]);
 native SendRconCommand(command[]);
+native GetPlayerNetworkStats(playerid, retstr[], retstr_size);
+native GetNetworkStats(retstr[], retstr_size);
+native GetPlayerVersion(playerid, const version[], len); // Returns the SA-MP client revision as reported by the player
+native BlockIpAddress(ip_address[], timems);
+native UnBlockIpAddress(ip_address[]);
+
+// Deprecated:
 native GetServerVarAsString(const varname[], buffer[], len);
 native GetServerVarAsInt(const varname[]);
 native GetServerVarAsBool(const varname[]);
+// These are the same 3 functions as above although they avoid the name ambiguity/conflict with the SVar system.
+native GetConsoleVarAsString(const varname[], buffer[], len);
+native GetConsoleVarAsInt(const varname[]);
+native GetConsoleVarAsBool(const varname[]);
+
+// Extended admin network stats
+native GetServerTickRate();
+native NetStats_GetConnectedTime(playerid);
+native NetStats_MessagesReceived(playerid);
+native NetStats_BytesReceived(playerid);
+native NetStats_MessagesSent(playerid);
+native NetStats_BytesSent(playerid);
+native NetStats_MessagesRecvPerSecond(playerid);
+native Float:NetStats_PacketLossPercent(playerid);
+native NetStats_ConnectionStatus(playerid);
+native NetStats_GetIpPort(playerid, ip_port[], ip_port_len);
 
 // Menu
 native Menu:CreateMenu(const title[], columns, Float:x, Float:y, Float:col1width, Float:col2width = 0.0);
@@ -129,6 +184,9 @@ native DisableMenuRow(Menu:menuid, row);
 native Menu:GetPlayerMenu(playerid);
 
 // Text Draw
+#define TEXT_DRAW_FONT_SPRITE_DRAW	 4
+#define TEXT_DRAW_FONT_MODEL_PREVIEW 5
+
 native Text:TextDrawCreate(Float:x, Float:y, text[]);
 native TextDrawDestroy(Text:text);
 native TextDrawLetterSize(Text:text, Float:x, Float:y);
@@ -142,11 +200,15 @@ native TextDrawSetOutline(Text:text, size);
 native TextDrawBackgroundColor(Text:text, color);
 native TextDrawFont(Text:text, font);
 native TextDrawSetProportional(Text:text, set);
+native TextDrawSetSelectable(Text:text, set);
 native TextDrawShowForPlayer(playerid, Text:text);
 native TextDrawHideForPlayer(playerid, Text:text);
 native TextDrawShowForAll(Text:text);
 native TextDrawHideForAll(Text:text);
 native TextDrawSetString(Text:text, string[]);
+native TextDrawSetPreviewModel(Text:text, modelindex);
+native TextDrawSetPreviewRot(Text:text, Float:fRotX, Float:fRotY, Float:fRotZ, Float:fZoom = 1.0);
+native TextDrawSetPreviewVehCol(Text:text, color1, color2);
 
 // Gang Zones
 native GangZoneCreate(Float:minx, Float:miny, Float:maxx, Float:maxy);
@@ -173,9 +235,12 @@ native DeletePlayer3DTextLabel(playerid, PlayerText3D:id);
 native UpdatePlayer3DTextLabelText(playerid, PlayerText3D:id, color, text[]);
 
 // Player GUI Dialog
-#define DIALOG_STYLE_MSGBOX		0
-#define DIALOG_STYLE_INPUT		1
-#define DIALOG_STYLE_LIST		2
+#define DIALOG_STYLE_MSGBOX				0
+#define DIALOG_STYLE_INPUT				1
+#define DIALOG_STYLE_LIST				2
+#define DIALOG_STYLE_PASSWORD			3
+#define DIALOG_STYLE_TABLIST			4
+#define DIALOG_STYLE_TABLIST_HEADERS	5
 
 native ShowPlayerDialog(playerid, dialogid, style, caption[], info[], button1[], button2[]);
 
@@ -263,6 +328,9 @@ native ShowPlayerDialog(playerid, dialogid, style, caption[], info[], button1[],
 #define KEY_ANALOG_DOWN			(4096)
 #define KEY_ANALOG_LEFT			(8192)
 #define KEY_ANALOG_RIGHT		(16384)
+#define KEY_YES					(65536)
+#define KEY_NO					(131072)
+#define KEY_CTRL_BACK			(262144)
 
 #define KEY_UP					(-128)
 #define KEY_DOWN				(128)
@@ -303,6 +371,7 @@ forward OnEnterExitModShop(playerid, enterexit, interiorid);
 forward OnVehiclePaintjob(playerid, vehicleid, paintjobid);
 forward OnVehicleRespray(playerid, vehicleid, color1, color2);
 forward OnVehicleDamageStatusUpdate(vehicleid, playerid);
+forward OnUnoccupiedVehicleUpdate(vehicleid, playerid, passenger_seat, Float:new_x, Float:new_y, Float:new_z, Float:vel_x, Float:vel_y, Float:vel_z);
 forward OnPlayerSelectedMenuRow(playerid, row);
 forward OnPlayerExitedMenu(playerid);
 forward OnPlayerInteriorChange(playerid, newinteriorid, oldinteriorid);
@@ -313,9 +382,45 @@ forward OnPlayerStreamIn(playerid, forplayerid);
 forward OnPlayerStreamOut(playerid, forplayerid);
 forward OnVehicleStreamIn(vehicleid, forplayerid);
 forward OnVehicleStreamOut(vehicleid, forplayerid);
+forward OnActorStreamIn(actorid, forplayerid);
+forward OnActorStreamOut(actorid, forplayerid);
 forward OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]);
+forward OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart);
+forward OnPlayerGiveDamage(playerid, damagedid, Float:amount, weaponid, bodypart);
+forward OnPlayerGiveDamageActor(playerid, damaged_actorid, Float:amount, weaponid, bodypart);
+forward OnPlayerClickMap(playerid, Float:fX, Float:fY, Float:fZ);
+forward OnPlayerClickTextDraw(playerid, Text:clickedid);
+forward OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid);
+forward OnIncomingConnection(playerid, ip_address[], port);
+forward OnTrailerUpdate(playerid, vehicleid);
+forward OnVehicleSirenStateChange(playerid, vehicleid, newstate);
 
 #define CLICK_SOURCE_SCOREBOARD		0
 forward OnPlayerClickPlayer(playerid, clickedplayerid, source);
+
+#define EDIT_RESPONSE_CANCEL		0
+#define EDIT_RESPONSE_FINAL			1
+#define EDIT_RESPONSE_UPDATE		2
+
+forward OnPlayerEditObject( playerid, playerobject, objectid, response, 
+Float:fX, Float:fY, Float:fZ, Float:fRotX, Float:fRotY, Float:fRotZ );
+
+forward OnPlayerEditAttachedObject( playerid, response, index, modelid, boneid,
+Float:fOffsetX, Float:fOffsetY, Float:fOffsetZ,
+Float:fRotX, Float:fRotY, Float:fRotZ,
+Float:fScaleX, Float:fScaleY, Float:fScaleZ );
+
+#define SELECT_OBJECT_GLOBAL_OBJECT	1
+#define SELECT_OBJECT_PLAYER_OBJECT 2
+
+forward OnPlayerSelectObject(playerid, type, objectid, modelid, Float:fX, Float:fY, Float:fZ);
+
+#define BULLET_HIT_TYPE_NONE			0
+#define BULLET_HIT_TYPE_PLAYER			1
+#define BULLET_HIT_TYPE_VEHICLE			2
+#define BULLET_HIT_TYPE_OBJECT			3
+#define BULLET_HIT_TYPE_PLAYER_OBJECT	4
+
+forward OnPlayerWeaponShot(playerid, weaponid, hittype, hitid, Float:fX, Float:fY, Float:fZ);
 
 // --------------------------------------------------
