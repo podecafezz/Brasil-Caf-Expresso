@@ -1,0 +1,101 @@
+/*RevolutioN User Functions
+
+Este arquivo faz parte do RevolutioN Include Stuff
+Favor não utilizar sem autorização
+*/
+
+#include <a_samp>
+
+stock CriarConta(nick[], senha[], wantedlvl, passport, creditos, acc_state, skin, bank_money, gasoline, habaerea, habterre, habnauti, prisao, prof, ppos_[], porte, phonenumb, agenda, xl)
+{
+	new insertq[256];
+	format(insertq,sizeof insertq,"'%s',NULL,'%s',0,%d,%d,%d,%d,%d,0,%d,%d,%d,%d,%d,%d,%d,0,0,%d,%d,%d,'%s',%d", nick, senha, wantedlvl, passport, creditos, acc_state, skin, bank_money, gasoline, habaerea, habterre, habnauti, prisao, prof, porte, phonenumb, agenda, ppos_, xl);
+	PRIV_sqlins("players",insertq);
+	return 1;
+}
+
+stock CellExists(numero)
+{
+	new query[256],rl[256];
+	format(query,256,"SELECT * FROM players WHERE phonenumb = %d",numero);
+	samp_mysql_query(query);
+	samp_mysql_store_result();
+	new rs = samp_mysql_fetch_row(rl);
+	return rs;
+}
+
+stock IPExists(nick[])
+{
+	new query[256],rl[256];
+	format(query,256,"SELECT * FROM ips WHERE nick = '%s'",nick);
+	samp_mysql_query(query);
+	samp_mysql_store_result();
+	new rs = samp_mysql_fetch_row(rl);
+	return rs;
+}
+
+stock Cadastrado(nick[])
+{
+	new query[256],rl[256];
+	format(query,256,"SELECT * FROM players WHERE nickname = '%s'",nick);
+	samp_mysql_query(query);
+	samp_mysql_store_result();
+	new rs = samp_mysql_fetch_row(rl);
+	return rs;
+}
+stock TrocarSenha(nick[], senha[]) PRIV_sqlset("players","pwdhash",senha,PRIV_FWN(nick));
+stock TrocarWantedLevel(nick[],wl) PRIV_sqlset("players","wantedlvl",IntToStr(wl),PRIV_FWN(nick));
+stock TrocarPassport(nick[],pass) PRIV_sqlset("players","passport",IntToStr(pass),PRIV_FWN(nick));
+stock TrocarAdminLevel(nick[],al) PRIV_sqlset("players","admlevel",IntToStr(al),PRIV_FWN(nick));
+stock TrocarCreditos(nick[],cre) PRIV_sqlset("players","creditos",IntToStr(cre),PRIV_FWN(nick));
+stock TrocarAccState(nick[],acc) PRIV_sqlset("players","acc_state",IntToStr(acc),PRIV_FWN(nick));
+stock TrocarSkin(nick[],skin) PRIV_sqlset("players","skin",IntToStr(skin),PRIV_FWN(nick));
+stock TrocarBankmoney(nick[],bm) PRIV_sqlset("players","bankmoney",IntToStr(bm),PRIV_FWN(nick));
+stock TrocarGas(nick[],gas) PRIV_sqlset("players","gasoline",IntToStr(gas),PRIV_FWN(nick));
+stock TrocarHabAerea(nick[],hab) PRIV_sqlset("players","habaerea",IntToStr(hab),PRIV_FWN(nick));
+stock TrocarHabTerre(nick[],hab) PRIV_sqlset("players","habterre",IntToStr(hab),PRIV_FWN(nick));
+stock TrocarHabNauti(nick[],hab) PRIV_sqlset("players","habnauti",IntToStr(hab),PRIV_FWN(nick));
+stock TrocarPrisao(nick[],pri) PRIV_sqlset("players","prisao",IntToStr(pri),PRIV_FWN(nick));
+stock TrocarPos(nick[],Float:x,Float:y,Float:z,Float:a)
+{
+	new tempos[256];
+	format(tempos,sizeof tempos,"%f %f %f %f",x,y,z,a);
+	PRIV_sqlset("players","ppos",tempos,PRIV_FWN(nick));
+	return 1;
+}
+stock TrocarProf(nick[],prf) PRIV_sqlset("players","prof",IntToStr(prf),PRIV_FWN(nick));
+stock TrocarAng(nick[],Float:a) PRIV_sqlset("players","ang",FloatToStr(a),PRIV_FWN(nick));
+stock TrocarPorte(nick[],por) PRIV_sqlset("players","porte",IntToStr(por),PRIV_FWN(nick));
+stock TrocarPhone(nick[],pn) PRIV_sqlset("players","phonenumb",IntToStr(pn),PRIV_FWN(nick));
+stock TrocarAgenda(nick[],a) PRIV_sqlset("players","agenda",IntToStr(a),PRIV_FWN(nick));
+stock TrocarXL(nick[],xl) PRIV_sqlset("players","xl",IntToStr(xl),PRIV_FWN(nick));
+stock PegarSenha(nick[],senha[256]) senha = PRIV_sqlget("players","pwdhash",PRIV_FWN(nick));
+stock PegarWantedLevel(nick[]) return strval(PRIV_sqlget("players","wantedlvl",PRIV_FWN(nick)));
+stock PegarPassport(nick[]) return strval(PRIV_sqlget("players","passport",PRIV_FWN(nick)));
+stock PegarCreditos(nick[]) return strval(PRIV_sqlget("players","creditos",PRIV_FWN(nick)));
+stock PegarAccState(nick[]) return strval(PRIV_sqlget("players","acc_state",PRIV_FWN(nick)));
+stock PegarSkin(nick[]) return strval(PRIV_sqlget("players","skin",PRIV_FWN(nick)));
+stock PegarBankmoney(nick[]) return strval(PRIV_sqlget("players","bankmoney",PRIV_FWN(nick)));
+stock PegarGas(nick[]) return strval(PRIV_sqlget("players","gasoline",PRIV_FWN(nick)));
+stock PegarHabAerea(nick[]) return strval(PRIV_sqlget("players","habaerea",PRIV_FWN(nick)));
+stock PegarHabTerre(nick[]) return strval(PRIV_sqlget("players","habterre",PRIV_FWN(nick)));
+stock PegarHabNauti(nick[]) return strval(PRIV_sqlget("players","habnauti",PRIV_FWN(nick)));
+stock PegarPrisao(nick[]) return strval(PRIV_sqlget("players","prisao",PRIV_FWN(nick)));
+stock PegarProf(nick[]) return strval(PRIV_sqlget("players","prof",PRIV_FWN(nick)));
+stock PegarPos(nick[],&Float:X,&Float:Y,&Float:Z,&Float:Ang) {
+	new tempos[256];
+	new index;
+	tempos = PRIV_sqlget("players","ppos",PRIV_FWN(nick));
+	printf("posicao retornada: %s",tempos);
+	X   = floatstr(strtok(tempos,index));
+	Y   = floatstr(strtok(tempos,index));
+	Z   = floatstr(strtok(tempos,index));
+	Ang = floatstr(strtok(tempos,index));
+	return 1;
+}
+stock PegarPorte(nick[]) return strval(PRIV_sqlget("players","porte",PRIV_FWN(nick)));
+stock PegarPhone(nick[]) return strval(PRIV_sqlget("players","phonenumb",PRIV_FWN(nick)));
+stock PegarAgenda(nick[]) return strval(PRIV_sqlget("players","agenda",PRIV_FWN(nick)));
+stock PegarXL(nick[]) return strval(PRIV_sqlget("players","xl",PRIV_FWN(nick)));
+
+stock RemoverConta(nick[]) PRIV_sqldel("players",PRIV_FWN(nick));

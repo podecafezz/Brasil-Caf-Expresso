@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet href="file:///C|/Documents and Settings/Bruno Gysin/Desktop/ServeFFS/pawno/xml/pawndoc.xsl" type="text/xsl"?>
+<doc source="C:\Documents and Settings\Bruno Gysin\Desktop\ServeFFS\pawno\include\TearGas.inc">
+	<assembly>
+		<name>TearGas.inc</name>
+	</assembly>
+	<members>
+
+		<!-- enumerations -->
+
+		<!-- constants -->
+
+		<!-- variables -->
+		<member name="F:TearGas">
+			<referrer name="TearGas_OnPlayerConnect"/>
+			<referrer name="GivePlayerTearGas"/>
+			<referrer name="SetPlayerTearGas"/>
+			<referrer name="GetPlayerTearGas"/>
+		</member>
+		<member name="F:TearGasObject">
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<referrer name="TearGasEfft"/>
+		</member>
+		<member name="F:TearGasTimer">
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<referrer name="StopTheEffect"/>
+		</member>
+		<member name="F:TearObject">
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<referrer name="StopTheEffect"/>
+		</member>
+
+		<!-- functions -->
+		<member name="M:ApplyAnimation" syntax="ApplyAnimation()">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<referrer name="TearGasEfft"/>
+		</member>
+		<member name="M:CreateObject" syntax="CreateObject()">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+		</member>
+		<member name="M:DestroyObject" syntax="DestroyObject()">
+			<stacksize value="1"/>
+			<referrer name="StopTheEffect"/>
+		</member>
+		<member name="M:GetObjectPos" syntax="GetObjectPos()">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<referrer name="TearGasEfft"/>
+		</member>
+		<member name="M:GetPlayerFacingAngle" syntax="GetPlayerFacingAngle()">
+			<stacksize value="1"/>
+			<referrer name="GetXYInFrontOfPlayer"/>
+		</member>
+		<member name="M:GetPlayerPos" syntax="GetPlayerPos()">
+			<stacksize value="1"/>
+			<referrer name="GetXYInFrontOfPlayer"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+		</member>
+		<member name="M:GetPlayerTearGas" syntax="GetPlayerTearGas(playerid)">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<dependency name="TearGas"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:GetPlayerVehicleID" syntax="GetPlayerVehicleID()">
+			<stacksize value="1"/>
+			<referrer name="GetXYInFrontOfPlayer"/>
+		</member>
+		<member name="M:GetVehicleZAngle" syntax="GetVehicleZAngle()">
+			<stacksize value="1"/>
+			<referrer name="GetXYInFrontOfPlayer"/>
+		</member>
+		<member name="M:GetXYInFrontOfPlayer" syntax="GetXYInFrontOfPlayer(playerid, &amp;x, &amp;y, distance)">
+			<stacksize value="8"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<dependency name="GetPlayerFacingAngle"/>
+			<dependency name="GetPlayerPos"/>
+			<dependency name="GetPlayerVehicleID"/>
+			<dependency name="GetVehicleZAngle"/>
+			<dependency name="floatcos"/>
+			<dependency name="floatsin"/>
+			<param name="playerid">
+			</param>
+			<param name="x">
+				<paraminfo>Float &amp; </paraminfo>
+			</param>
+			<param name="y">
+				<paraminfo>Float &amp; </paraminfo>
+			</param>
+			<param name="distance">
+				<paraminfo>Float </paraminfo>
+			</param>
+		</member>
+		<member name="M:GivePlayerTearGas" syntax="GivePlayerTearGas(playerid, amount)">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+			<dependency name="TearGas"/>
+			<param name="playerid">
+			</param>
+			<param name="amount">
+			</param>
+		</member>
+		<member name="M:IsPlayerInRangeOfPoint" syntax="IsPlayerInRangeOfPoint()">
+			<stacksize value="1"/>
+			<referrer name="TearGasEfft"/>
+		</member>
+		<member name="M:KillTimer" syntax="KillTimer()">
+			<stacksize value="1"/>
+			<referrer name="StopTheEffect"/>
+		</member>
+		<member name="M:MoveObject" syntax="MoveObject()">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+		</member>
+		<member name="M:SetPlayerTearGas" syntax="SetPlayerTearGas(playerid, amount)">
+			<stacksize value="1"/>
+			<dependency name="TearGas"/>
+			<param name="playerid">
+			</param>
+			<param name="amount">
+			</param>
+		</member>
+		<member name="M:SetTimer" syntax="SetTimer()">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+		</member>
+		<member name="M:SetTimerEx" syntax="SetTimerEx()">
+			<stacksize value="1"/>
+			<referrer name="TearGasOnPlayerKeyStateChange"/>
+		</member>
+		<member name="M:StopTheEffect" syntax="StopTheEffect(playerid)">
+			<attribute name="public"/>
+			<stacksize value="4"/>
+			<dependency name="DestroyObject"/>
+			<dependency name="KillTimer"/>
+			<dependency name="TearGasTimer"/>
+			<dependency name="TearObject"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:TearGasEfft" syntax="TearGasEfft()">
+			<attribute name="public"/>
+			<stacksize value="16"/>
+			<dependency name="ApplyAnimation"/>
+			<dependency name="GetObjectPos"/>
+			<dependency name="IsPlayerInRangeOfPoint"/>
+			<dependency name="TearGasObject"/>
+		</member>
+		<member name="M:TearGasOnPlayerKeyStateChange" syntax="TearGasOnPlayerKeyStateChange(playerid, newkeys)">
+			<stacksize value="16"/>
+			<dependency name="ApplyAnimation"/>
+			<dependency name="CreateObject"/>
+			<dependency name="GetObjectPos"/>
+			<dependency name="GetPlayerPos"/>
+			<dependency name="GetPlayerTearGas"/>
+			<dependency name="GetXYInFrontOfPlayer"/>
+			<dependency name="GivePlayerTearGas"/>
+			<dependency name="MoveObject"/>
+			<dependency name="SetTimer"/>
+			<dependency name="SetTimerEx"/>
+			<dependency name="TearGasObject"/>
+			<dependency name="TearGasTimer"/>
+			<dependency name="TearObject"/>
+			<param name="playerid">
+			</param>
+			<param name="newkeys">
+			</param>
+		</member>
+		<member name="M:TearGas_OnPlayerConnect" syntax="TearGas_OnPlayerConnect(playerid)">
+			<stacksize value="1"/>
+			<dependency name="TearGas"/>
+			<param name="playerid">
+			</param>
+		</member>
+		<member name="M:floatcos" syntax="floatcos()">
+			<stacksize value="1"/>
+			<referrer name="GetXYInFrontOfPlayer"/>
+		</member>
+		<member name="M:floatsin" syntax="floatsin()">
+			<stacksize value="1"/>
+			<referrer name="GetXYInFrontOfPlayer"/>
+		</member>
+
+	</members>
+</doc>
